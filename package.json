@@ -1,6 +1,6 @@
 {
-  "name": "qualtrics-api",
-  "version": "1.0.0",
+  "name": "@miramac/qualtrics-api",
+  "version": "0.1.0",
   "description": "Sorry, this project is still work in progress.",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,12 @@
   "bugs": {
     "url": "https://github.com/Miramac/qualtrics-api/issues"
   },
-  "homepage": "https://github.com/Miramac/qualtrics-api#readme"
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "homepage": "https://github.com/Miramac/qualtrics-api#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "node-fetch": "^2.6.0"
+  }
 }
