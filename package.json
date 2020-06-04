@@ -1,6 +1,6 @@
 {
   "name": "qualtrics-api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -10,8 +10,16 @@
     "test": "tap test/test.*.js",
     "make-doc": "jsdoc2md ./lib/qualtrics.js > doc.md"
   },
+  "repository": {
+   "type": "git",
+   "url": "git+https://github.com/Miramac/qualtrics-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Miramac/qualtrics-api/issues"
+  },
+  "homepage": "https://github.com/Miramac/qualtrics-api#readme",
   "keywords": [],
-  "author": "",
+  "author": "Miramac",
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0"
