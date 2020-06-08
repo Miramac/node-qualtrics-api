@@ -1,6 +1,5 @@
-# qualtrics-api
-
-This project is still work in progress.
+# node-qualtrics-api
+A NodeJS package for Qualtrics REST API https://api.qualtrics.com/reference
 
 ## Install
 ````
@@ -68,7 +67,7 @@ Qualtrics
 
 | Param | Type |
 | --- | --- |
-| config | <code>object</code> | 
+| config | <code>object</code> |
 
 <a name="Qualtrics+whoami"></a>
 
@@ -91,7 +90,7 @@ Gets general information about a user
 
 | Param | Type |
 | --- | --- |
-| userId | <code>String</code> | 
+| userId | <code>String</code> |
 
 <a name="Qualtrics+updateUser"></a>
 
@@ -102,8 +101,8 @@ Updates user information
 
 | Param | Type |
 | --- | --- |
-| userId | <code>String</code> | 
-| data | <code>object</code> | 
+| userId | <code>String</code> |
+| data | <code>object</code> |
 
 <a name="Qualtrics+getGroups"></a>
 
@@ -120,7 +119,7 @@ Gets information about a specified group
 
 | Param | Type |
 | --- | --- |
-| groupId | <code>String</code> | 
+| groupId | <code>String</code> |
 
 <a name="Qualtrics+addGroup"></a>
 
@@ -131,9 +130,9 @@ Creates a new group
 
 | Param | Type |
 | --- | --- |
-| name | <code>String</code> | 
-| type | <code>String</code> | 
-| divisionId | <code>String</code> | 
+| name | <code>String</code> |
+| type | <code>String</code> |
+| divisionId | <code>String</code> |
 
 <a name="Qualtrics+addGroupMember"></a>
 
@@ -144,8 +143,8 @@ Add User to Group
 
 | Param | Type |
 | --- | --- |
-| groupId | <code>String</code> | 
-| userId | <code>String</code> | 
+| groupId | <code>String</code> |
+| userId | <code>String</code> |
 
 <a name="Qualtrics+removeGroupMember"></a>
 
@@ -156,8 +155,8 @@ Remove User from Group
 
 | Param | Type |
 | --- | --- |
-| groupId | <code>String</code> | 
-| userId | <code>String</code> | 
+| groupId | <code>String</code> |
+| userId | <code>String</code> |
 
 <a name="Qualtrics+getDirectoryContacts"></a>
 
@@ -168,8 +167,8 @@ Get Directory Contacts. PageSize 100
 
 | Param | Type |
 | --- | --- |
-| skipToken | <code>String</code> | 
-| directoryId | <code>String</code> | 
+| skipToken | <code>String</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+getAllDirectoryContacts"></a>
 
@@ -180,7 +179,7 @@ Get all Directory Contacts
 
 | Param | Type |
 | --- | --- |
-| directoryId | <code>String</code> | 
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+getDirectoryContact"></a>
 
@@ -191,8 +190,8 @@ Get data for one Directory Contact
 
 | Param | Type |
 | --- | --- |
-| contactId | <code>String</code> | 
-| directoryId | <code>String</code> | 
+| contactId | <code>String</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+updateDirectoryContact"></a>
 
@@ -203,9 +202,9 @@ Update Directory Contact
 
 | Param | Type |
 | --- | --- |
-| contactId | <code>String</code> | 
-| data | <code>Object</code> | 
-| directoryId | <code>String</code> | 
+| contactId | <code>String</code> |
+| data | <code>Object</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+removeDirectoryContact"></a>
 
@@ -216,9 +215,9 @@ delete Directory Contact
 
 | Param | Type |
 | --- | --- |
-| contactId | <code>String</code> | 
-| data | <code>Object</code> | 
-| directoryId | <code>String</code> | 
+| contactId | <code>String</code> |
+| data | <code>Object</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+unsubscribedDirectoryContact"></a>
 
@@ -229,8 +228,8 @@ Unsubscribed Contact im Directory aus
 
 | Param | Type |
 | --- | --- |
-| contactId | <code>String</code> | 
-| directoryId | <code>String</code> | 
+| contactId | <code>String</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+getListContacts"></a>
 
@@ -241,8 +240,8 @@ Liste aller Kontakte einer Mailingliste
 
 | Param | Type |
 | --- | --- |
-| listId | <code>String</code> | 
-| directoryId | <code>String</code> | 
+| listId | <code>String</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+getListContact"></a>
 
@@ -253,9 +252,9 @@ Liste aller Kontakte einer Mailingliste
 
 | Param | Type |
 | --- | --- |
-| directoryId | <code>String</code> | 
-| contactId | <code>String</code> | 
-| directoryId | <code>String</code> | 
+| directoryId | <code>String</code> |
+| contactId | <code>String</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+updateListContact"></a>
 
@@ -266,10 +265,10 @@ Update Daten eines List Contact
 
 | Param | Type |
 | --- | --- |
-| listId | <code>String</code> | 
-| contactId | <code>String</code> | 
-| data | <code>Object</code> | 
-| directoryId | <code>String</code> | 
+| listId | <code>String</code> |
+| contactId | <code>String</code> |
+| data | <code>Object</code> |
+| directoryId | <code>String</code> |
 
 <a name="Qualtrics+getDistributions"></a>
 
@@ -280,8 +279,8 @@ Liste aller Distributions für ein Projekt
 
 | Param | Type |
 | --- | --- |
-| surveyId | <code>String</code> | 
-| distributionRequestType | <code>String</code> | 
+| surveyId | <code>String</code> |
+| distributionRequestType | <code>String</code> |
 
 <a name="Qualtrics+getDistributionLinks"></a>
 
@@ -292,8 +291,8 @@ Liste aller Kontakte einer Distribution
 
 | Param | Type |
 | --- | --- |
-| surveyId | <code>String</code> | 
-| distributionRequestType | <code>String</code> | 
+| surveyId | <code>String</code> |
+| distributionRequestType | <code>String</code> |
 
 <a name="Qualtrics+getSession"></a>
 
@@ -302,8 +301,8 @@ Liste aller Kontakte einer Distribution
 
 | Param | Type |
 | --- | --- |
-| surveyId | <code>String</code> | 
-| sessionId | <code>String</code> | 
+| surveyId | <code>String</code> |
+| sessionId | <code>String</code> |
 
 <a name="Qualtrics+deleteSession"></a>
 
@@ -312,8 +311,8 @@ Liste aller Kontakte einer Distribution
 
 | Param | Type |
 | --- | --- |
-| surveyId | <code>String</code> | 
-| sessionId | <code>String</code> | 
+| surveyId | <code>String</code> |
+| sessionId | <code>String</code> |
 
 <a name="Qualtrics+downloadResponseExport"></a>
 
@@ -324,9 +323,9 @@ Erstellt einen Datenexport und speichert diesen in eine Zip Datei
 
 | Param | Type |
 | --- | --- |
-| surveyId | <code>String</code> | 
-| outputFile | <code>String</code> | 
-| format|options | <code>String</code> \| <code>Object</code> | 
+| surveyId | <code>String</code> |
+| outputFile | <code>String</code> |
+| format|options | <code>String</code> \| <code>Object</code> |
 
 <a name="Qualtrics+deleteSurveyResponse"></a>
 
@@ -337,7 +336,5 @@ Löscht Umfrageergebnisse
 
 | Param | Type |
 | --- | --- |
-| surveyId | <code>String</code> | 
-| responseId | <code>String</code> | 
-
-
+| surveyId | <code>String</code> |
+| responseId | <code>String</code> |
