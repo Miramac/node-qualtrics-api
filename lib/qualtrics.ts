@@ -1,5 +1,5 @@
-const fs = require('fs')
-const Fetch = require('./fetch')
+import { Fetch } from './fetch'
+import * as fs from 'fs'
 const sleep = require('util').promisify(setTimeout)
 
 /**
@@ -30,7 +30,7 @@ Qualtrics.prototype.whoami = function () {
 /**
  * Gets all users in the collection
  * @returns {Promise}
- * @url https://api.qualtrics.com/reference#list-users 
+ * @url https://api.qualtrics.com/reference#list-users
  * @example
  *  qualtrics.getUsers()
  *  .then(users => {
