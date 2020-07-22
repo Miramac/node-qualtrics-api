@@ -30,7 +30,10 @@ export class Fetch {
       .then((res: any) => res.json())
   }
 
-  // GET Reponse Object
+  /**
+   * GET Reponse Object
+   * @param path 
+   */
   getRaw(path: string) {
     path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
     return nodeFetch(path, {
@@ -40,7 +43,11 @@ export class Fetch {
     })
   }
 
-  // POST Request
+  /**
+   * POST Request
+   * @param path 
+   * @param data 
+   */
   post(path: string, data: object) {
     path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
     return nodeFetch(path, {
@@ -52,8 +59,11 @@ export class Fetch {
       .then((res: any) => res.json())
   }
 
-  // DELETE Request
-  delete(path: string, data: object) {
+  /**
+   * DELETE Request
+   * @param path 
+   */
+  delete(path: string, data?: object) {
     path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
     return nodeFetch(path, {
       method: 'delete',
