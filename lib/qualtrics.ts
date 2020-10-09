@@ -1,25 +1,34 @@
 import { Fetch } from './fetch'
 import * as fs from 'fs'
+/** @ignore */
 const delay = require('util').promisify(setTimeout)
 
-interface Options { apiToken: string; baseUrl: string, DefaultDirectory: string, agent: any } // eslint-disable-line
+/**
+ * Qualtrics Login data
+ */
+interface QualtricsOptions { apiToken: string; baseUrl: string, defaultDirectory: string, agent: any } // eslint-disable-line
 
 /**
  * Creates a new Qualtrics instance.
  * @class Qualtrics
- * @param {object} config
- * @example
- *  const config = {
- *    apiToken: '<API_TOKEN>',
- *    baseUrl: 'https://eu.qualtrics.com/API/v3/',
- *    DefaultDirectory: 'POOL_xxxxxxxx'
- *  }
- *  const qualtrics = new Qualtrics(config)
  */
 export class Qualtrics {
-  config: Options
+  config: QualtricsOptions
   fetch: Fetch
-  constructor(config: Options) {
+  /**
+  * 
+  * @param Options Qualtrics Login data
+  * @example
+  * ```
+  *  const config = {
+  *    apiToken: '<API_TOKEN>',
+  *    baseUrl: 'https://eu.qualtrics.com/API/v3/',
+  *    defaultDirectory: 'POOL_xxxxxxxx'
+  *  }
+  *  const qualtrics = new Qualtrics(config)
+  * ```
+  */
+  constructor(config: QualtricsOptions) {
     this.config = config
     this.fetch = new Fetch(config)
   }
@@ -37,12 +46,14 @@ export class Qualtrics {
    * @returns {Promise}
    * @url https://api.qualtrics.com/reference#list-users
    * @example
+   * ```
    *  qualtrics.getUsers()
    *  .then(users => {
    *    console.log(users.length)
    *  }).catch(e => {
    *    console.error(e)
    *  })
+   * ```
    */
   getUsers() {
     return this.fetch.get('users')
@@ -127,17 +138,17 @@ export class Qualtrics {
   /**
      * Get Directory Contacts. PageSize 100
      * @param {String} skipToken
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   getDirectoryContacts(skipToken: string | null, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.get(`/directories/${directoryId}/contacts/?pageSize=100${(skipToken) ? '&skipToken=' + skipToken : ''}`)
   }
 
   /**
      * Get all Directory Contacts
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   async getAllDirectoryContacts (directoryId?: string) {
@@ -162,11 +173,11 @@ export class Qualtrics {
   /**
      * Get data for one Directory Contact
      * @param {String} contactId
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   getDirectoryContact(contactId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.get(`/directories/${directoryId}/contacts/${contactId}`)
   }
 
@@ -174,30 +185,29 @@ export class Qualtrics {
      * Update Directory Contact
      * @param {String} contactId
      * @param {Object} data
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   updateDirectoryContact(contactId: string, data: object, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.put(`/directories/${directoryId}/contacts/${contactId}`, data)
   }
 
   /**
-     * delete Directory Contact
+     * Delete Directory Contact
      * @param {String} contactId
-     * @param {Object} data
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   removeDirectoryContact(contactId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.delete(`/directories/${directoryId}/contacts/${contactId}`)
   }
 
   /**
     * Unsubscribed Contact im Directory aus
     * @param {String} contactId
-    * @param {String} directoryId
+    * @param {String=} directoryId
     * @returns {Promise}
     */
   unsubscribedDirectoryContact(contactId: string, directoryId?: string) {
@@ -205,25 +215,25 @@ export class Qualtrics {
   }
 
   /**
-     * Liste aller Kontakte einer Mailingliste
+     * Get all mailinglists contacts
      * @param {String} listId
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   getListContacts(listId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.get(`/directories/${directoryId}/mailinglists/${listId}/contacts`)
   }
 
   /**
-     * Liste aller Kontakte einer Mailingliste
-     * @param {String} directoryId
+     * Get contact from mailinglists
+     * @param {String} listId
      * @param {String} contactId
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   getListContact(listId: string, contactId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.get(`/directories/${directoryId}/mailinglists/${listId}/contacts/${contactId}`)
   }
 
@@ -232,11 +242,11 @@ export class Qualtrics {
      * @param {String} listId
      * @param {String} contactId
      * @param {Object} data
-     * @param {String} directoryId
+     * @param {String=} directoryId
      * @returns {Promise}
      */
   updateListContact(listId: string, contactId: string, data: object, directoryId?: string) {
-    directoryId = directoryId || this.config.DefaultDirectory
+    directoryId = directoryId || this.config.defaultDirectory
     return this.fetch.put(`/directories/${directoryId}/mailinglists/${listId}/contacts/${contactId}`, data)
   }
 

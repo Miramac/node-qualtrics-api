@@ -1,13 +1,13 @@
 import * as https from 'https'
 const nodeFetch = require('node-fetch')
 
-interface Options { apiToken: string; baseUrl: string, agent: any } // eslint-disable-line
+interface FetchOptions { apiToken: string; baseUrl: string, agent: any } // eslint-disable-line
 
 export class Fetch {
   headers: object
   baseUrl: string
   agent: any
-  constructor(config: Options) {
+  constructor(config: FetchOptions) {
     this.headers = {
       'Content-Type': 'application/json',
       'x-api-token': config.apiToken
