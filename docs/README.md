@@ -1,3 +1,7 @@
+**[qualtrics-api](README.md)**
+
+> [Globals](globals.md)
+
 # node-qualtrics-api
 A NodeJS package for Qualtrics REST API https://api.qualtrics.com/reference
 

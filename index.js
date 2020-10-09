@@ -1,1 +1,1 @@
-module.exports = require('./lib/qualtrics')
+module.exports = require('./dist/qualtrics')
