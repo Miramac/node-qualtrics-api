@@ -12,7 +12,7 @@ interface QualtricsOptions { apiToken: string; baseUrl: string, defaultDirectory
  * Creates a new Qualtrics instance.
  * @class Qualtrics
  */
-export class Qualtrics {
+class Qualtrics {
   config: QualtricsOptions
   fetch: Fetch
   /**
@@ -377,3 +377,5 @@ export class Qualtrics {
     return this.fetch.delete(`surveys/${surveyId}/responses/${responseId}`, { decrementQuotas: true })
   }
 }
+
+export = Qualtrics
