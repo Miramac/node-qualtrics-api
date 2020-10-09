@@ -1,5 +1,6 @@
 # node-qualtrics-api
-A NodeJS package for Qualtrics REST API https://api.qualtrics.com/reference
+A NodeJS package for Qualtrics REST API https://api.qualtrics.com/api-reference/
+> Not all API endpoints have been implemented yet.
 
 ## Install
 ````
@@ -25,3 +26,4 @@ qualtrics.whoami()
   .catch(console.error)
 
 ````
+[Full Documentation](https://github.com/Miramac/node-qualtrics-api/blob/master/docs/classes/_qualtrics_.qualtrics.md)
