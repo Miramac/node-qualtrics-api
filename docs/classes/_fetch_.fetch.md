@@ -34,7 +34,7 @@
 
 \+ **new Fetch**(`config`: [FetchOptions](../interfaces/_fetch_.fetchoptions.md)): [Fetch](_fetch_.fetch.md)
 
-*Defined in [fetch.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L9)*
+*Defined in fetch.ts:9*
 
 #### Parameters:
 
@@ -50,7 +50,7 @@ Name | Type |
 
 •  **agent**: any
 
-*Defined in [fetch.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L9)*
+*Defined in fetch.ts:9*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 •  **baseUrl**: string
 
-*Defined in [fetch.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L8)*
+*Defined in fetch.ts:8*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 •  **headers**: object
 
-*Defined in [fetch.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L7)*
+*Defined in fetch.ts:7*
 
 ## Methods
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **delete**(`path`: string, `data?`: undefined \| object): any
 
-*Defined in [fetch.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L66)*
+*Defined in fetch.ts:66*
 
 DELETE Request
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **get**(`path`: string): any
 
-*Defined in [fetch.ts:23](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L23)*
+*Defined in fetch.ts:23*
 
 #### Parameters:
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **getRaw**(`path`: string): any
 
-*Defined in [fetch.ts:37](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L37)*
+*Defined in fetch.ts:37*
 
 GET Reponse Object
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **post**(`path`: string, `data`: object): any
 
-*Defined in [fetch.ts:51](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L51)*
+*Defined in fetch.ts:51*
 
 POST Request
 
@@ -146,7 +146,7 @@ ___
 
 ▸ **put**(`path`: string, `data`: object): any
 
-*Defined in [fetch.ts:78](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L78)*
+*Defined in fetch.ts:78*
 
 #### Parameters:
 

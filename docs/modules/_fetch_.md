@@ -24,4 +24,4 @@
 
 • `Const` **nodeFetch**: any = require('node-fetch')
 
-*Defined in [fetch.ts:2](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/fetch.ts#L2)*
+*Defined in fetch.ts:2*

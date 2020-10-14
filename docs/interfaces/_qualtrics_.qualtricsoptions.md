@@ -25,7 +25,7 @@ Qualtrics Login data
 
 •  **agent**: any
 
-*Defined in [qualtrics.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/qualtrics.ts#L9)*
+*Defined in qualtrics.ts:9*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 •  **apiToken**: string
 
-*Defined in [qualtrics.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/qualtrics.ts#L9)*
+*Defined in qualtrics.ts:9*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 •  **baseUrl**: string
 
-*Defined in [qualtrics.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/qualtrics.ts#L9)*
+*Defined in qualtrics.ts:9*
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 •  **defaultDirectory**: string
 
-*Defined in [qualtrics.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/cec54d9/lib/qualtrics.ts#L9)*
+*Defined in qualtrics.ts:9*
