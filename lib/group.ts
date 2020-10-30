@@ -22,6 +22,15 @@ export class Group {
     get() {
       return this.fetch.get(`groups/${this.id}`)
     }
+
+  /**
+     * Gets all groups
+     * @param {String} groupId
+     * @returns {Promise}
+     */
+    getAll() {
+      return this.fetch.get('groups')
+    }
   
     /**
        * Creates a new group
