@@ -1,4 +1,4 @@
-import { QualtricsOptions } from './options'
+import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
 
 export class User {
