@@ -1,6 +1,6 @@
 import * as https from 'https'
 import { Response } from 'node-fetch'
-import { FetchOptions } from './options'
+import { FetchOptions } from './interfaces/options'
 const nodeFetch = require('node-fetch')
 
 
@@ -21,7 +21,7 @@ export class Fetch {
    * GET JSON Request Reponse
    *  @path {string} URL
    */
-  get(path: string) {
+  get(path: string):Promise<any> {
     path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
     return nodeFetch(path, {
       method: 'get',
@@ -43,7 +43,7 @@ export class Fetch {
    * GET Reponse Object
    * @param path 
    */
-  getRaw(path: string) {
+  getRaw(path: string): Promise<Response> {
     path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
     return nodeFetch(path, {
       method: 'get',
