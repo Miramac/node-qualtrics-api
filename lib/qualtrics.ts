@@ -1,12 +1,11 @@
+import { QualtricsOptions } from './options'
 import { Fetch } from './fetch'
+import { User } from './user'
+import { Group } from './group'
 import * as fs from 'fs'
+
 /** @ignore */
 const delay = require('util').promisify(setTimeout)
-
-/**
- * Qualtrics Login data
- */
-interface QualtricsOptions { apiToken: string; baseUrl: string, defaultDirectory: string, agent: any } // eslint-disable-line
 
 /**
  * Creates a new Qualtrics instance.
@@ -42,7 +41,36 @@ class Qualtrics {
   }
 
   /**
+   * @param id {String} User ID   
+   * @returns {User}
+   * @example
+   * ```
+   * const user = qualtrics.user('UR_1A2B3C4d5E6F7G8)
+   */
+  user (id: string) {
+    return new User(this.config, id)
+  }
+
+  /**
    * Gets all users in the collection
+   * @returns {Promise}
+   * @url https://api.qualtrics.com/reference#list-users
+   * @example
+   * ```
+   *  qualtrics.allUsers()
+   *  .then(users => {
+   *    console.log(users.length)
+   *  }).catch(e => {
+   *    console.error(e)
+   *  })
+   * ```
+   */
+  allUsers () {
+    return this.fetch.get('users')
+  }
+  /**
+   * Gets all users in the collection
+   * @deprecated Use: allUsers()
    * @returns {Promise}
    * @url https://api.qualtrics.com/reference#list-users
    * @example
@@ -61,6 +89,7 @@ class Qualtrics {
 
   /**
    * Gets general information about a user
+   * @deprecated Use: user('id').get()
    * @param {String} userId
    * @returns {Promise}
    * @Url https://api.qualtrics.com/reference#get-user
@@ -71,6 +100,7 @@ class Qualtrics {
 
   /**
    * Updates user information
+   * @deprecated Use: user('id').update({data})
    * @param {String} userId
    * @param {object} data
    * @returns {Promise}
@@ -79,8 +109,19 @@ class Qualtrics {
     return this.fetch.put('users/' + userId, data)
   }
 
+  group(id: string) {
+    return new Group(this.config, id)
+  } 
+  /**
+  * Gets list of all groups known to the user account
+  * @returns {Promise}
+  */
+  allGroups() {
+  return this.fetch.get('groups')
+  }
   /**
      * Gets list of all groups known to the user account
+     * @deprecated
      * @returns {Promise}
      */
   getGroups() {
@@ -89,6 +130,7 @@ class Qualtrics {
 
   /**
      * Gets information about a specified group
+     * @deprecated
      * @param {String} groupId
      * @returns {Promise}
      */
@@ -98,6 +140,7 @@ class Qualtrics {
 
   /**
      * Creates a new group
+     * @deprecated
      * @param {String} name
      * @param {String} type
      * @param {String} divisionId
@@ -114,6 +157,7 @@ class Qualtrics {
 
   /**
      * Add User to Group
+     * @deprecated
      * @param {String} groupId
      * @param {String} userId
      * @returns {Promise}
@@ -127,6 +171,7 @@ class Qualtrics {
 
   /**
      * Remove User from Group
+     * @deprecated
      * @param {String} groupId
      * @param {String} userId
      * @returns {Promise}
@@ -238,6 +283,17 @@ class Qualtrics {
   }
 
   /**
+     * Add List Contact
+     * @param {String} listId
+     * @param {Object} data
+     * @param {String=} directoryId
+     * @returns {Promise}
+     */
+    addListContact(listId: string, data: object, directoryId?: string) {
+      directoryId = directoryId || this.config.defaultDirectory
+      return this.fetch.post(`/directories/${directoryId}/mailinglists/${listId}/contacts/`, data)
+    }
+  /**
      * Update Daten eines List Contact
      * @param {String} listId
      * @param {String} contactId
@@ -250,6 +306,7 @@ class Qualtrics {
     return this.fetch.put(`/directories/${directoryId}/mailinglists/${listId}/contacts/${contactId}`, data)
   }
 
+  
   /**
      * Liste aller Distributions für ein Projekt
      * @param {String} surveyId
@@ -260,7 +317,16 @@ class Qualtrics {
     distributionRequestType = (distributionRequestType) ? `&distributionRequestType=${distributionRequestType}` : ''
     return this.fetch.get(`/distributions?surveyId=${surveyId}${distributionRequestType}`)
   }
-
+/**
+     * Liste aller Distributions für ein Projekt
+     * @param {String} surveyId
+     * @param {String} distributionRequestType
+     * @returns {Promise}
+     */
+    addDistribution(surveyId: string, data: object) {
+      return this.fetch.post('/distributions', data)
+    }
+  
   /**
      * Liste aller Kontakte einer Distribution
      * @param {String} surveyId
