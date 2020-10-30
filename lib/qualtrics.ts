@@ -2,6 +2,7 @@ import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
 import { User } from './user'
 import { Group } from './group'
+import { IQDirectory } from './iqDirectory'
 import * as fs from 'fs'
 
 /** @ignore */
@@ -117,7 +118,7 @@ class Qualtrics {
   * @returns {Promise}
   */
   allGroups() {
-  return this.fetch.get('groups')
+  return new Group(this.config).get()
   }
   /**
      * Gets list of all groups known to the user account
@@ -147,12 +148,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   addGroup(name: string, type: string, divisionId?: string) {
-    const data = {
-      type: type,
-      name: name,
-      divisionId: divisionId || null
-    }
-    return this.fetch.post('groups', data)
+    return new Group(this.config).add(name, type, divisionId)
   }
 
   /**
@@ -177,83 +173,73 @@ class Qualtrics {
     return this.group(groupId).removeMember(userId)
   }
 
+  directory(directory?: string) {
+    return new IQDirectory(this.config, directory)
+  }
   /**
      * Get Directory Contacts. PageSize 100
+     * @deprecated
      * @param {String} skipToken
      * @param {String=} directoryId
      * @returns {Promise}
      */
-  getDirectoryContacts(skipToken: string | null, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.get(`/directories/${directoryId}/contacts/?pageSize=100${(skipToken) ? '&skipToken=' + skipToken : ''}`)
+  getDirectoryContacts(skipToken?: string, directoryId?: string) {
+    return this.directory(directoryId).getContacts(skipToken)
   }
 
   /**
      * Get all Directory Contacts
+     * @deprecated
      * @param {String=} directoryId
      * @returns {Promise}
      */
   async getAllDirectoryContacts (directoryId?: string) {
-    let contacts: any[] = []
-    let skipToken = null
-    try {
-      do {
-        const res: any = await this.getDirectoryContacts(skipToken, directoryId)
-        if (res.meta.httpStatus !== '200 - OK') {
-          return Promise.reject(new Error(res.meta))
-        }
-        contacts = contacts.concat(res.result.elements)
-        skipToken = res.result.nextPage
-        skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : skipToken
-      } while (skipToken)
-      return contacts
-    } catch (e) {
-      return Promise.reject(e)
-    }
+    return this.directory(directoryId).getAllContacts()
   }
 
   /**
      * Get data for one Directory Contact
+     * @deprecated
      * @param {String} contactId
      * @param {String=} directoryId
      * @returns {Promise}
      */
   getDirectoryContact(contactId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.get(`/directories/${directoryId}/contacts/${contactId}`)
+    return this.directory(directoryId).getContact(contactId)
   }
 
   /**
      * Update Directory Contact
+     * @deprecated
      * @param {String} contactId
      * @param {Object} data
      * @param {String=} directoryId
      * @returns {Promise}
      */
   updateDirectoryContact(contactId: string, data: object, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.put(`/directories/${directoryId}/contacts/${contactId}`, data)
+    return this.directory(directoryId).updateContact(contactId, data)
   }
 
   /**
      * Delete Directory Contact
+     * @deprecated
      * @param {String} contactId
      * @param {String=} directoryId
      * @returns {Promise}
      */
   removeDirectoryContact(contactId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.delete(`/directories/${directoryId}/contacts/${contactId}`)
+    return this.directory(directoryId).removeContact(contactId)
   }
 
   /**
     * Unsubscribed Contact im Directory aus
+     * @deprecated
     * @param {String} contactId
     * @param {String=} directoryId
     * @returns {Promise}
     */
   unsubscribedDirectoryContact(contactId: string, directoryId?: string) {
-    return this.updateDirectoryContact(contactId, { unsubscribed: true }, directoryId)
+    return this.directory(directoryId).unsubscribedContact(contactId)
   }
 
   /**
