@@ -1,7 +1,8 @@
 import * as https from 'https'
+import { Response } from 'node-fetch'
+import { FetchOptions } from './options'
 const nodeFetch = require('node-fetch')
 
-interface FetchOptions { apiToken: string; baseUrl: string, agent: any } // eslint-disable-line
 
 export class Fetch {
   headers: object
@@ -16,10 +17,10 @@ export class Fetch {
     this.agent = config.agent || new https.Agent()
   }
 
-  // interface Fetch {
-  //     distanceFromOrigin(point: Point): number;
-  // }
-  // GET JSON Request Reponse
+  /**
+   * GET JSON Request Reponse
+   *  @path {string} URL
+   */
   get(path: string) {
     path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
     return nodeFetch(path, {
@@ -27,7 +28,15 @@ export class Fetch {
       headers: this.headers,
       agent: this.agent
     })
-      .then((res: any) => res.json())
+      .then((res: Response) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          return res.json().then(json => {
+            return Promise.reject(json)
+          })
+        }
+      })
   }
 
   /**
@@ -56,7 +65,15 @@ export class Fetch {
       body: JSON.stringify(data),
       agent: this.agent
     })
-      .then((res: any) => res.json())
+      .then((res: Response) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          return res.json().then(json => {
+            return Promise.reject(json)
+          })
+        }
+      })
   }
 
   /**
@@ -71,7 +88,15 @@ export class Fetch {
       body: JSON.stringify(data),
       agent: this.agent
     })
-      .then((res: any) => res.json())
+      .then((res: Response) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          return res.json().then(json => {
+            return Promise.reject(json)
+          })
+        }
+      })
   }
 
   // PUT Request
@@ -83,6 +108,14 @@ export class Fetch {
       body: JSON.stringify(data),
       agent: this.agent
     })
-      .then((res: any) => res.json())
+      .then((res: Response) => {
+        if (res.ok) {
+          return res.json()
+        } else {
+          return res.json().then(json => {
+            return Promise.reject(json)
+          })
+        }
+      })
   }
 }
