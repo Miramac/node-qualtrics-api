@@ -84,7 +84,7 @@ class Qualtrics {
    * ```
    */
   getUsers() {
-    return this.fetch.get('users')
+    return this.allUsers()
   }
 
   /**
@@ -95,7 +95,7 @@ class Qualtrics {
    * @Url https://api.qualtrics.com/reference#get-user
    */
   getUser(userId: string) {
-    return this.fetch.get('users/' + userId)
+    return this.user(userId).get()
   }
 
   /**
@@ -106,7 +106,7 @@ class Qualtrics {
    * @returns {Promise}
    */
   updateUser(userId: string, data: object) {
-    return this.fetch.put('users/' + userId, data)
+    return this.user(userId).update(data)
   }
 
   group(id: string) {
@@ -125,7 +125,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   getGroups() {
-    return this.fetch.get('groups')
+    return this.allGroups()
   }
 
   /**
@@ -135,7 +135,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   getGroup(groupId: string) {
-    return this.fetch.get('groups/' + groupId)
+    return this.group(groupId).get()
   }
 
   /**
@@ -163,10 +163,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   addGroupMember(groupId: string, userId: string) {
-    const data = {
-      userId: userId
-    }
-    return this.fetch.post(`groups/${groupId}/members`, data)
+    return this.group(groupId).addMember(userId)
   }
 
   /**
@@ -177,7 +174,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   removeGroupMember(groupId: string, userId: string) {
-    return this.fetch.delete(`groups/${groupId}/members/${userId}`)
+    return this.group(groupId).removeMember(userId)
   }
 
   /**
