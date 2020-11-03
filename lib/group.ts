@@ -1,7 +1,6 @@
 import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
 
-const route = 'groups/'
 export class Group {
   config: QualtricsOptions
   fetch: Fetch

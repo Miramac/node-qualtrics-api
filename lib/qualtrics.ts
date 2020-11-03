@@ -2,8 +2,10 @@ import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
 import { User } from './user'
 import { Group } from './group'
-import { IQDirectory } from './iqDirectory'
+import { IQDirectory } from './iq-directory'
 import * as fs from 'fs'
+import { Distribution } from './distribution'
+import { MailingList } from './mailing-list'
 
 /** @ignore */
 const delay = require('util').promisify(setTimeout)
@@ -242,42 +244,47 @@ class Qualtrics {
     return this.directory(directoryId).unsubscribedContact(contactId)
   }
 
+  mainigList(id: string, directoryId?: string) {
+    return new MailingList(this.config, id, directoryId)
+  }
   /**
      * Get all mailinglists contacts
+     * @deprecated
      * @param {String} listId
      * @param {String=} directoryId
      * @returns {Promise}
      */
   getListContacts(listId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.get(`/directories/${directoryId}/mailinglists/${listId}/contacts`)
+    return this.mainigList(listId, directoryId).getContacts()
   }
 
   /**
      * Get contact from mailinglists
+     * @deprecated
      * @param {String} listId
      * @param {String} contactId
      * @param {String=} directoryId
      * @returns {Promise}
      */
   getListContact(listId: string, contactId: string, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.get(`/directories/${directoryId}/mailinglists/${listId}/contacts/${contactId}`)
+    return this.mainigList(listId, directoryId).getContact(contactId)
   }
 
   /**
      * Add List Contact
+     * @deprecated
      * @param {String} listId
      * @param {Object} data
      * @param {String=} directoryId
      * @returns {Promise}
      */
     addListContact(listId: string, data: object, directoryId?: string) {
-      directoryId = directoryId || this.config.defaultDirectory
-      return this.fetch.post(`/directories/${directoryId}/mailinglists/${listId}/contacts/`, data)
+    return this.mainigList(listId, directoryId).addContact(data)
     }
+
   /**
      * Update Daten eines List Contact
+     * @deprecated
      * @param {String} listId
      * @param {String} contactId
      * @param {Object} data
@@ -285,56 +292,47 @@ class Qualtrics {
      * @returns {Promise}
      */
   updateListContact(listId: string, contactId: string, data: object, directoryId?: string) {
-    directoryId = directoryId || this.config.defaultDirectory
-    return this.fetch.put(`/directories/${directoryId}/mailinglists/${listId}/contacts/${contactId}`, data)
+    return this.mainigList(listId, directoryId).updateContact(contactId, data)
   }
 
-  
+  /**
+   * Returns a new survey distribution object
+   * @param survey SurveyId
+   * @returns {Distribution}
+   */
+  distribution(survey: string) {
+    return new Distribution(this.config, survey)
+  }
   /**
      * Liste aller Distributions für ein Projekt
+     * @deprecated
      * @param {String} surveyId
      * @param {String} distributionRequestType
      * @returns {Promise}
      */
   getDistributions(surveyId: string, distributionRequestType?: string) {
-    distributionRequestType = (distributionRequestType) ? `&distributionRequestType=${distributionRequestType}` : ''
-    return this.fetch.get(`/distributions?surveyId=${surveyId}${distributionRequestType}`)
+    return this.distribution(surveyId).getAll(distributionRequestType)
   }
 /**
      * Liste aller Distributions für ein Projekt
+     * @deprecated
      * @param {String} surveyId
-     * @param {String} distributionRequestType
+     * @param {Object} data
      * @returns {Promise}
      */
-    addDistribution(surveyId: string, data: object) {
-      return this.fetch.post('/distributions', data)
+    addDistribution(surveyId: string, data: any) {
+      return this.distribution(surveyId).addDistribution(data.mailingListId, data)
     }
   
   /**
      * Liste aller Kontakte einer Distribution
+     * @deprecated
      * @param {String} surveyId
      * @param {String} distributionRequestType
      * @returns {Promise}
      */
   async getDistributionLinks (surveyId: string, distributionId: string) {
-    let contacts: any[] = []
-    let skipToken = false
-    try {
-      do {
-        const res: any = await this.fetch.get(`/distributions/${distributionId}/links?surveyId=${surveyId}&skipToken=${skipToken || ''}`)
-        if (res.meta.httpStatus !== '200 - OK') {
-          return Promise.reject(new Error(res.meta))
-        }
-        if (res.result) {
-          contacts = contacts.concat(res.result.elements)
-          skipToken = res.result.nextPage
-          skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : skipToken
-        }
-      } while (skipToken)
-      return contacts
-    } catch (e) {
-      return Promise.reject(e)
-    }
+    return this.distribution(surveyId).getLinks(distributionId)
   }
 
   /**
