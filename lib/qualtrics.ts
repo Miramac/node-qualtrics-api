@@ -1,10 +1,11 @@
+
+import * as fs from 'fs'
 import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
 import { User } from './user'
 import { Group } from './group'
 import { IQDirectory } from './iq-directory'
-import * as fs from 'fs'
-import { Distribution } from './distribution'
+import { Survey } from './survey'
 import { MailingList } from './mailing-list'
 
 /** @ignore */
@@ -120,7 +121,7 @@ class Qualtrics {
   * @returns {Promise}
   */
   allGroups() {
-  return new Group(this.config).get()
+    return new Group(this.config).getAll()
   }
   /**
      * Gets list of all groups known to the user account
@@ -297,11 +298,11 @@ class Qualtrics {
 
   /**
    * Returns a new survey distribution object
-   * @param survey SurveyId
-   * @returns {Distribution}
+   * @param id SurveyId
+   * @returns {Survey}
    */
-  distribution(survey: string) {
-    return new Distribution(this.config, survey)
+  survey(id: string) {
+    return new Survey(this.config, id)
   }
   /**
      * Liste aller Distributions für ein Projekt
@@ -311,7 +312,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   getDistributions(surveyId: string, distributionRequestType?: string) {
-    return this.distribution(surveyId).getAll(distributionRequestType)
+    return this.survey(surveyId).getAll(distributionRequestType)
   }
 /**
      * Liste aller Distributions für ein Projekt
@@ -321,7 +322,7 @@ class Qualtrics {
      * @returns {Promise}
      */
     addDistribution(surveyId: string, data: any) {
-      return this.distribution(surveyId).addDistribution(data.mailingListId, data)
+      return this.survey(surveyId).addDistribution(data.mailingListId, data)
     }
   
   /**
@@ -332,25 +333,27 @@ class Qualtrics {
      * @returns {Promise}
      */
   async getDistributionLinks (surveyId: string, distributionId: string) {
-    return this.distribution(surveyId).getLinks(distributionId)
+    return this.survey(surveyId).getLinks(distributionId)
   }
 
   /**
+     * @deprecated
      * @param {String} surveyId
      * @param {String} sessionId
      * @returns {Promise}
      */
   getSession (surveyId: string, sessionId: string) {
-    return this.fetch.get(`surveys/${surveyId}/sessions/${sessionId}`)
+    return this.survey(surveyId).getSession(sessionId)
   }
 
   /**
+     * @deprecated
      * @param {String} surveyId
      * @param {String} sessionId
      * @returns {Promise}
      */
   deleteSession (surveyId: string, sessionId: string) {
-    return this.fetch.delete(`surveys/${surveyId}/sessions/${sessionId}`)
+    return this.survey(surveyId).deleteSession(sessionId)
   }
 
   /**
@@ -359,69 +362,18 @@ class Qualtrics {
      * @param {String} outputFile
      * @param {String|Object} format|options
      */
-  async downloadResponseExport (surveyId: string, outputFile: string, options: any) {
-    options = options || {}
-    options = (typeof options === 'string') ? { format: options } : options
-    options.format = options.format || 'json'
-    const progressId = await this.createResponseExport(surveyId, options)
-    if (!progressId) return
-    let fileId = null
-    while (fileId === null) {
-      fileId = await this.responseExportProgress(surveyId, progressId)
-      await delay(1000) // Progess nur 1x in der Sekunde abfragen
-    }
-    await this.fetchResponseExport(surveyId, fileId, outputFile)
-  }
-
-  async createResponseExport (surveyId: string, options: object) {
-    const res = await this.fetch.post(`surveys/${surveyId}/export-responses`, options)
-    if (res.meta.error) {
-      throw new Error(res.meta.error.errorMessage)
-    } else {
-      if (res.result.progressId) {
-        return res.result.progressId
-      }
-    }
-  }
-
-  async responseExportProgress (surveyId: string, progressId: string) {
-    const res = await this.fetch.get(`surveys/${surveyId}/export-responses/${progressId}`)
-    if (res.meta.error) {
-      throw new Error(res.meta.error.errorMessage)
-    } else {
-      if (res.result.status && res.result.status === 'complete') {
-        return res.result.fileId
-      } else {
-        return null
-      }
-    }
-  }
-
-  fetchResponseExport (surveyId: string, fileId: string, outputFile: string) {
-    return new Promise((resolve, reject) => {
-      this.fetch.getRaw(`surveys/${surveyId}/export-responses/${fileId}/file`)
-        .then((res: any) => {
-          if (res.status === 200) {
-            const file = fs.createWriteStream(outputFile)
-            // Write outputfile
-            res.body.pipe(file)
-            file.on('finish', () => resolve(outputFile))
-            file.on('error', reject)
-          } else {
-            reject(new Error(res.statusText))
-          }
-        })
-        .catch(reject)
-    })
+  downloadResponseExport (surveyId: string, outputFile: string, options: any) {
+    return this.survey(surveyId).downloadResponseExport(outputFile, options)
   }
 
   /**
     * Delete survey response
+    * @deprecated
     * @param {String} surveyId
     * @param {String} responseId
     */
   deleteSurveyResponse(surveyId: string, responseId: string) {
-    return this.fetch.delete(`surveys/${surveyId}/responses/${responseId}`, { decrementQuotas: true })
+    return this.survey(surveyId).deleteResponse(responseId)
   }
 }
 
