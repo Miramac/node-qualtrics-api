@@ -8,7 +8,7 @@
     "prepare": "npm run build && npm run typedoc-md",
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "tap test/test.*.js",
+    "test": "tap test/tap.*.js",
     "typedoc-md": "typedoc --plugin typedoc-plugin-markdown ./lib/qualtrics.ts",
     "typedoc": "typedoc ./lib/qualtrics.ts"
   },
