@@ -67,5 +67,13 @@ export class Group {
        */
     removeMember(userId: string) {
       return this.fetch.delete(`groups/${this.id}/members/${userId}`)
-    }  
+    }
+
+    /**
+       * List Users from Group
+       * @returns {Promise}
+       */
+      getMembers() {
+        return this.fetch.get(`groups/${this.id}/members/`)
+      }  
 }
