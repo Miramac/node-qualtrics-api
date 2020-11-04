@@ -23,13 +23,16 @@ Creates a new Qualtrics instance.
 
 ### Methods
 
+* [addDistribution](_qualtrics_.qualtrics.md#adddistribution)
 * [addGroup](_qualtrics_.qualtrics.md#addgroup)
 * [addGroupMember](_qualtrics_.qualtrics.md#addgroupmember)
-* [createResponseExport](_qualtrics_.qualtrics.md#createresponseexport)
+* [addListContact](_qualtrics_.qualtrics.md#addlistcontact)
+* [allGroups](_qualtrics_.qualtrics.md#allgroups)
+* [allUsers](_qualtrics_.qualtrics.md#allusers)
 * [deleteSession](_qualtrics_.qualtrics.md#deletesession)
 * [deleteSurveyResponse](_qualtrics_.qualtrics.md#deletesurveyresponse)
+* [directory](_qualtrics_.qualtrics.md#directory)
 * [downloadResponseExport](_qualtrics_.qualtrics.md#downloadresponseexport)
-* [fetchResponseExport](_qualtrics_.qualtrics.md#fetchresponseexport)
 * [getAllDirectoryContacts](_qualtrics_.qualtrics.md#getalldirectorycontacts)
 * [getDirectoryContact](_qualtrics_.qualtrics.md#getdirectorycontact)
 * [getDirectoryContacts](_qualtrics_.qualtrics.md#getdirectorycontacts)
@@ -42,22 +45,25 @@ Creates a new Qualtrics instance.
 * [getSession](_qualtrics_.qualtrics.md#getsession)
 * [getUser](_qualtrics_.qualtrics.md#getuser)
 * [getUsers](_qualtrics_.qualtrics.md#getusers)
+* [group](_qualtrics_.qualtrics.md#group)
+* [mainigList](_qualtrics_.qualtrics.md#mainiglist)
 * [removeDirectoryContact](_qualtrics_.qualtrics.md#removedirectorycontact)
 * [removeGroupMember](_qualtrics_.qualtrics.md#removegroupmember)
-* [responseExportProgress](_qualtrics_.qualtrics.md#responseexportprogress)
+* [survey](_qualtrics_.qualtrics.md#survey)
 * [unsubscribedDirectoryContact](_qualtrics_.qualtrics.md#unsubscribeddirectorycontact)
 * [updateDirectoryContact](_qualtrics_.qualtrics.md#updatedirectorycontact)
 * [updateListContact](_qualtrics_.qualtrics.md#updatelistcontact)
 * [updateUser](_qualtrics_.qualtrics.md#updateuser)
+* [user](_qualtrics_.qualtrics.md#user)
 * [whoami](_qualtrics_.qualtrics.md#whoami)
 
 ## Constructors
 
 ### constructor
 
-\+ **new Qualtrics**(`config`: [QualtricsOptions](../interfaces/_qualtrics_.qualtricsoptions.md)): [Qualtrics](_qualtrics_.qualtrics.md)
+\+ **new Qualtrics**(`config`: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)): [Qualtrics](_qualtrics_.qualtrics.md)
 
-*Defined in qualtrics.ts:17*
+*Defined in [qualtrics.ts:20](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L20)*
 
 **`example`** 
 ```
@@ -73,7 +79,7 @@ Creates a new Qualtrics instance.
 
 Name | Type |
 ------ | ------ |
-`config` | [QualtricsOptions](../interfaces/_qualtrics_.qualtricsoptions.md) |
+`config` | [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md) |
 
 **Returns:** [Qualtrics](_qualtrics_.qualtrics.md)
 
@@ -81,9 +87,9 @@ Name | Type |
 
 ### config
 
-•  **config**: [QualtricsOptions](../interfaces/_qualtrics_.qualtricsoptions.md)
+•  **config**: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)
 
-*Defined in qualtrics.ts:16*
+*Defined in [qualtrics.ts:19](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L19)*
 
 ___
 
@@ -91,17 +97,40 @@ ___
 
 •  **fetch**: [Fetch](_fetch_.fetch.md)
 
-*Defined in qualtrics.ts:17*
+*Defined in [qualtrics.ts:20](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L20)*
 
 ## Methods
+
+### addDistribution
+
+▸ **addDistribution**(`surveyId`: string, `data`: any): any
+
+*Defined in [qualtrics.ts:324](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L324)*
+
+Liste aller Distributions für ein Projekt
+
+**`deprecated`** 
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`surveyId` | string |
+`data` | any |
+
+**Returns:** any
+
+___
 
 ### addGroup
 
 ▸ **addGroup**(`name`: string, `type`: string, `divisionId?`: undefined \| string): any
 
-*Defined in qualtrics.ts:106*
+*Defined in [qualtrics.ts:153](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L153)*
 
 Creates a new group
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -119,9 +148,11 @@ ___
 
 ▸ **addGroupMember**(`groupId`: string, `userId`: string): any
 
-*Defined in qualtrics.ts:121*
+*Defined in [qualtrics.ts:164](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L164)*
 
 Add User to Group
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -134,18 +165,59 @@ Name | Type |
 
 ___
 
-### createResponseExport
+### addListContact
 
-▸ **createResponseExport**(`surveyId`: string, `options`: object): Promise\<any>
+▸ **addListContact**(`listId`: string, `data`: object, `directoryId?`: undefined \| string): any
 
-*Defined in qualtrics.ts:329*
+*Defined in [qualtrics.ts:282](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L282)*
+
+Add List Contact
+
+**`deprecated`** 
 
 #### Parameters:
 
 Name | Type |
 ------ | ------ |
-`surveyId` | string |
-`options` | object |
+`listId` | string |
+`data` | object |
+`directoryId?` | undefined \| string |
+
+**Returns:** any
+
+___
+
+### allGroups
+
+▸ **allGroups**(): Promise\<any>
+
+*Defined in [qualtrics.ts:123](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L123)*
+
+Gets list of all groups known to the user account
+
+**Returns:** Promise\<any>
+
+___
+
+### allUsers
+
+▸ **allUsers**(): Promise\<any>
+
+*Defined in [qualtrics.ts:72](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L72)*
+
+Gets all users in the collection
+
+**`url`** https://api.qualtrics.com/reference#list-users
+
+**`example`** 
+```
+ qualtrics.allUsers()
+ .then(users => {
+   console.log(users.length)
+ }).catch(e => {
+   console.error(e)
+ })
+```
 
 **Returns:** Promise\<any>
 
@@ -155,7 +227,9 @@ ___
 
 ▸ **deleteSession**(`surveyId`: string, `sessionId`: string): any
 
-*Defined in qualtrics.ts:305*
+*Defined in [qualtrics.ts:355](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L355)*
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -172,9 +246,11 @@ ___
 
 ▸ **deleteSurveyResponse**(`surveyId`: string, `responseId`: string): any
 
-*Defined in qualtrics.ts:376*
+*Defined in [qualtrics.ts:375](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L375)*
 
 Delete survey response
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -187,11 +263,27 @@ Name | Type | Description |
 
 ___
 
+### directory
+
+▸ **directory**(`directory?`: undefined \| string): [IQDirectory](_iq_directory_.iqdirectory.md)
+
+*Defined in [qualtrics.ts:179](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L179)*
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`directory?` | undefined \| string |
+
+**Returns:** [IQDirectory](_iq_directory_.iqdirectory.md)
+
+___
+
 ### downloadResponseExport
 
 ▸ **downloadResponseExport**(`surveyId`: string, `outputFile`: string, `options`: any): Promise\<void>
 
-*Defined in qualtrics.ts:315*
+*Defined in [qualtrics.ts:365](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L365)*
 
 Create a Exportfile with the survey response data
 
@@ -207,31 +299,15 @@ Name | Type |
 
 ___
 
-### fetchResponseExport
-
-▸ **fetchResponseExport**(`surveyId`: string, `fileId`: string, `outputFile`: string): Promise\<unknown>
-
-*Defined in qualtrics.ts:353*
-
-#### Parameters:
-
-Name | Type |
------- | ------ |
-`surveyId` | string |
-`fileId` | string |
-`outputFile` | string |
-
-**Returns:** Promise\<unknown>
-
-___
-
 ### getAllDirectoryContacts
 
 ▸ **getAllDirectoryContacts**(`directoryId?`: undefined \| string): Promise\<any[]>
 
-*Defined in qualtrics.ts:154*
+*Defined in [qualtrics.ts:199](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L199)*
 
 Get all Directory Contacts
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -245,11 +321,13 @@ ___
 
 ### getDirectoryContact
 
-▸ **getDirectoryContact**(`contactId`: string, `directoryId?`: undefined \| string): any
+▸ **getDirectoryContact**(`contactId`: string, `directoryId?`: undefined \| string): Promise\<any>
 
-*Defined in qualtrics.ts:179*
+*Defined in [qualtrics.ts:210](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L210)*
 
 Get data for one Directory Contact
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -258,26 +336,28 @@ Name | Type |
 `contactId` | string |
 `directoryId?` | undefined \| string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getDirectoryContacts
 
-▸ **getDirectoryContacts**(`skipToken`: string \| null, `directoryId?`: undefined \| string): any
+▸ **getDirectoryContacts**(`skipToken?`: undefined \| string, `directoryId?`: undefined \| string): Promise\<any>
 
-*Defined in qualtrics.ts:144*
+*Defined in [qualtrics.ts:189](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L189)*
 
 Get Directory Contacts. PageSize 100
+
+**`deprecated`** 
 
 #### Parameters:
 
 Name | Type |
 ------ | ------ |
-`skipToken` | string \| null |
+`skipToken?` | undefined \| string |
 `directoryId?` | undefined \| string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
@@ -285,9 +365,11 @@ ___
 
 ▸ **getDistributionLinks**(`surveyId`: string, `distributionId`: string): Promise\<any[]>
 
-*Defined in qualtrics.ts:270*
+*Defined in [qualtrics.ts:335](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L335)*
 
 Liste aller Kontakte einer Distribution
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -302,11 +384,13 @@ ___
 
 ### getDistributions
 
-▸ **getDistributions**(`surveyId`: string, `distributionRequestType?`: undefined \| string): any
+▸ **getDistributions**(`surveyId`: string, `distributionRequestType?`: undefined \| string): Promise\<any>
 
-*Defined in qualtrics.ts:259*
+*Defined in [qualtrics.ts:314](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L314)*
 
 Liste aller Distributions für ein Projekt
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -315,17 +399,19 @@ Name | Type |
 `surveyId` | string |
 `distributionRequestType?` | undefined \| string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getGroup
 
-▸ **getGroup**(`groupId`: string): any
+▸ **getGroup**(`groupId`: string): Promise\<any>
 
-*Defined in qualtrics.ts:95*
+*Defined in [qualtrics.ts:141](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L141)*
 
 Gets information about a specified group
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -333,29 +419,33 @@ Name | Type |
 ------ | ------ |
 `groupId` | string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getGroups
 
-▸ **getGroups**(): any
+▸ **getGroups**(): Promise\<any>
 
-*Defined in qualtrics.ts:86*
+*Defined in [qualtrics.ts:131](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L131)*
 
 Gets list of all groups known to the user account
 
-**Returns:** any
+**`deprecated`** 
+
+**Returns:** Promise\<any>
 
 ___
 
 ### getListContact
 
-▸ **getListContact**(`listId`: string, `contactId`: string, `directoryId?`: undefined \| string): any
+▸ **getListContact**(`listId`: string, `contactId`: string, `directoryId?`: undefined \| string): Promise\<any>
 
-*Defined in qualtrics.ts:235*
+*Defined in [qualtrics.ts:270](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L270)*
 
 Get contact from mailinglists
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -365,17 +455,19 @@ Name | Type |
 `contactId` | string |
 `directoryId?` | undefined \| string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getListContacts
 
-▸ **getListContacts**(`listId`: string, `directoryId?`: undefined \| string): any
+▸ **getListContacts**(`listId`: string, `directoryId?`: undefined \| string): Promise\<any>
 
-*Defined in qualtrics.ts:223*
+*Defined in [qualtrics.ts:258](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L258)*
 
 Get all mailinglists contacts
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -384,15 +476,17 @@ Name | Type |
 `listId` | string |
 `directoryId?` | undefined \| string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getSession
 
-▸ **getSession**(`surveyId`: string, `sessionId`: string): any
+▸ **getSession**(`surveyId`: string, `sessionId`: string): Promise\<any>
 
-*Defined in qualtrics.ts:296*
+*Defined in [qualtrics.ts:345](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L345)*
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -401,17 +495,19 @@ Name | Type |
 `surveyId` | string |
 `sessionId` | string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getUser
 
-▸ **getUser**(`userId`: string): any
+▸ **getUser**(`userId`: string): Promise\<any>
 
-*Defined in qualtrics.ts:68*
+*Defined in [qualtrics.ts:101](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L101)*
 
 Gets general information about a user
+
+**`deprecated`** Use: user('id').get()
 
 **`url`** https://api.qualtrics.com/reference#get-user
 
@@ -421,17 +517,19 @@ Name | Type |
 ------ | ------ |
 `userId` | string |
 
-**Returns:** any
+**Returns:** Promise\<any>
 
 ___
 
 ### getUsers
 
-▸ **getUsers**(): any
+▸ **getUsers**(): Promise\<any>
 
-*Defined in qualtrics.ts:58*
+*Defined in [qualtrics.ts:90](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L90)*
 
 Gets all users in the collection
+
+**`deprecated`** Use: allUsers()
 
 **`url`** https://api.qualtrics.com/reference#list-users
 
@@ -445,7 +543,40 @@ Gets all users in the collection
  })
 ```
 
-**Returns:** any
+**Returns:** Promise\<any>
+
+___
+
+### group
+
+▸ **group**(`id`: string): [Group](_group_.group.md)
+
+*Defined in [qualtrics.ts:116](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L116)*
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`id` | string |
+
+**Returns:** [Group](_group_.group.md)
+
+___
+
+### mainigList
+
+▸ **mainigList**(`id`: string, `directoryId?`: undefined \| string): [MailingList](_mailing_list_.mailinglist.md)
+
+*Defined in [qualtrics.ts:248](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L248)*
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`id` | string |
+`directoryId?` | undefined \| string |
+
+**Returns:** [MailingList](_mailing_list_.mailinglist.md)
 
 ___
 
@@ -453,9 +584,11 @@ ___
 
 ▸ **removeDirectoryContact**(`contactId`: string, `directoryId?`: undefined \| string): any
 
-*Defined in qualtrics.ts:202*
+*Defined in [qualtrics.ts:233](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L233)*
 
 Delete Directory Contact
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -472,9 +605,11 @@ ___
 
 ▸ **removeGroupMember**(`groupId`: string, `userId`: string): any
 
-*Defined in qualtrics.ts:134*
+*Defined in [qualtrics.ts:175](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L175)*
 
 Remove User from Group
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -487,20 +622,21 @@ Name | Type |
 
 ___
 
-### responseExportProgress
+### survey
 
-▸ **responseExportProgress**(`surveyId`: string, `progressId`: string): Promise\<any>
+▸ **survey**(`id`: string): [Survey](_survey_.survey.md)
 
-*Defined in qualtrics.ts:340*
+*Defined in [qualtrics.ts:304](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L304)*
+
+Returns a new survey distribution object
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`surveyId` | string |
-`progressId` | string |
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | SurveyId |
 
-**Returns:** Promise\<any>
+**Returns:** [Survey](_survey_.survey.md)
 
 ___
 
@@ -508,9 +644,11 @@ ___
 
 ▸ **unsubscribedDirectoryContact**(`contactId`: string, `directoryId?`: undefined \| string): any
 
-*Defined in qualtrics.ts:213*
+*Defined in [qualtrics.ts:244](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L244)*
 
 Unsubscribed Contact im Directory aus
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -527,9 +665,11 @@ ___
 
 ▸ **updateDirectoryContact**(`contactId`: string, `data`: object, `directoryId?`: undefined \| string): any
 
-*Defined in qualtrics.ts:191*
+*Defined in [qualtrics.ts:222](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L222)*
 
 Update Directory Contact
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -547,9 +687,11 @@ ___
 
 ▸ **updateListContact**(`listId`: string, `contactId`: string, `data`: object, `directoryId?`: undefined \| string): any
 
-*Defined in qualtrics.ts:248*
+*Defined in [qualtrics.ts:295](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L295)*
 
 Update Daten eines List Contact
+
+**`deprecated`** 
 
 #### Parameters:
 
@@ -568,9 +710,11 @@ ___
 
 ▸ **updateUser**(`userId`: string, `data`: object): any
 
-*Defined in qualtrics.ts:78*
+*Defined in [qualtrics.ts:112](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L112)*
 
 Updates user information
+
+**`deprecated`** Use: user('id').update({data})
 
 #### Parameters:
 
@@ -583,14 +727,34 @@ Name | Type |
 
 ___
 
+### user
+
+▸ **user**(`id`: string): [User](_user_.user.md)
+
+*Defined in [qualtrics.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L54)*
+
+**`example`** 
+```
+const user = qualtrics.user('UR_1A2B3C4d5E6F7G8)
+
+#### Parameters:
+
+Name | Type | Description |
+------ | ------ | ------ |
+`id` | string | User ID |
+
+**Returns:** [User](_user_.user.md)
+
+___
+
 ### whoami
 
-▸ **whoami**(): any
+▸ **whoami**(): Promise\<any>
 
-*Defined in qualtrics.ts:40*
+*Defined in [qualtrics.ts:43](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/qualtrics.ts#L43)*
 
 Determine the user ID and other user information associated with an Qualtrics API token
 
 **`url`** https://api.qualtrics.com/reference#who-am-i
 
-**Returns:** any
+**Returns:** Promise\<any>

@@ -10,10 +10,6 @@
 
 * [Fetch](../classes/_fetch_.fetch.md)
 
-### Interfaces
-
-* [FetchOptions](../interfaces/_fetch_.fetchoptions.md)
-
 ### Variables
 
 * [nodeFetch](_fetch_.md#nodefetch)
@@ -24,4 +20,4 @@
 
 • `Const` **nodeFetch**: any = require('node-fetch')
 
-*Defined in fetch.ts:2*
+*Defined in [fetch.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L4)*
