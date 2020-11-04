@@ -20,15 +20,14 @@ t.test('whoami', async t => {
   t.equal(result.meta.httpStatus, '200 - OK', 'it should return http status 200')
   t.end()
 })
-t.test('getUsers', async t => {
-  const result = await qualtrics.getUsers()
+t.test('Get all users', async t => {
+  const result = await qualtrics.allUsers()
   t.equal(Array.isArray(result.result.elements), true, 'it should be an array')
   t.equal(result.meta.httpStatus, '200 - OK', 'it should return http status 200')
   t.end()
 })
-
-t.test('getGroups', async t => {
-  const result = await qualtrics.getGroups()
+t.test('Get all groups', async t => {
+  const result = await qualtrics.allGroups()
   t.equal(Array.isArray(result.result.elements), true, 'it should be an array')
   t.equal(result.meta.httpStatus, '200 - OK', 'it should return http status 200')
   t.end()
