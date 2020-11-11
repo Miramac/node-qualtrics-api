@@ -247,16 +247,6 @@ class Qualtrics {
 
   /**
    * 
-   * @param userId 
-   * @param name 
-   * @url https://api.qualtrics.com/api-reference/reference/mailingLists.json/paths/~1directories~1%7BdirectoryId%7D~1mailinglists/post
-   */
-  addMailingList(ownerId: string, name: string) {
-    return this.fetch.post(`/directories/{directoryId}/mailinglists`, {name: name, ownerId: ownerId })
-  }
-  
-  /**
-   * 
    * @param id 
    * @param directoryId 
    * @returns MailingList

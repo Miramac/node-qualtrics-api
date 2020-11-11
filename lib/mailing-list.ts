@@ -1,13 +1,14 @@
 import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
+import { StringifyOptions } from 'querystring'
 
 export class MailingList {
   config: QualtricsOptions
   fetch: Fetch
   directory: string | undefined
-  id: string
+  id: string | undefined
 
-  constructor(config: QualtricsOptions, id: string, directory?: string) {
+  constructor(config: QualtricsOptions, id?: string, directory?: string) {
     this.config = config
     this.id = id
     this.directory = directory || this.config.defaultDirectory
@@ -51,5 +52,34 @@ export class MailingList {
      */
   updateContact(contactId: string, data: object) {
     return this.fetch.put(`/directories/${this.directory}/mailinglists/${this.id}/contacts/${contactId}`, data)
+  }
+
+  /**
+   * Update Daten eines List Contact
+   * @param {String} listId
+   * @param {String} contactId
+   * @param {Object} data
+   * @returns {Promise}
+   */
+  removeContact(contactId: String) {
+    return this.fetch.delete(`/directories/${this.directory}/mailinglists/${this.id}/contacts/${contactId}`)
+  }
+
+  /**
+   * @param ownerId 
+   * @param name
+   */
+  add(ownerId: string, name: string) {
+    return this.fetch.post(`/directories/${this.directory}/mailinglists`, {name: name, ownerId: ownerId })
+  }
+    /**
+   * Update mteh Mailinglist
+   * @param {String} listId
+   * @param {String} contactId
+   * @param {Object} data
+   * @returns {Promise}
+   */
+  delete() {
+    return this.fetch.delete(`/directories/${this.directory}/mailinglists/${this.id}`)
   }
 }
