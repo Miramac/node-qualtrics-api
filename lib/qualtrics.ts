@@ -236,7 +236,7 @@ class Qualtrics {
 
   /**
     * Unsubscribed Contact im Directory aus
-     * @deprecated
+    * @deprecated
     * @param {String} contactId
     * @param {String=} directoryId
     * @returns {Promise}
@@ -245,9 +245,26 @@ class Qualtrics {
     return this.directory(directoryId).unsubscribedContact(contactId)
   }
 
-  mainigList(id: string, directoryId?: string) {
+  /**
+   * 
+   * @param userId 
+   * @param name 
+   * @url https://api.qualtrics.com/api-reference/reference/mailingLists.json/paths/~1directories~1%7BdirectoryId%7D~1mailinglists/post
+   */
+  addMailingList(ownerId: string, name: string) {
+    return this.fetch.post(`/directories/{directoryId}/mailinglists`, {name: name, ownerId: ownerId })
+  }
+  
+  /**
+   * 
+   * @param id 
+   * @param directoryId 
+   * @returns MailingList
+   */
+  mailingList(id: string, directoryId?: string) {
     return new MailingList(this.config, id, directoryId)
   }
+
   /**
      * Get all mailinglists contacts
      * @deprecated
@@ -256,7 +273,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   getListContacts(listId: string, directoryId?: string) {
-    return this.mainigList(listId, directoryId).getContacts()
+    return this.mailingList(listId, directoryId).getContacts()
   }
 
   /**
@@ -268,7 +285,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   getListContact(listId: string, contactId: string, directoryId?: string) {
-    return this.mainigList(listId, directoryId).getContact(contactId)
+    return this.mailingList(listId, directoryId).getContact(contactId)
   }
 
   /**
@@ -280,7 +297,7 @@ class Qualtrics {
      * @returns {Promise}
      */
     addListContact(listId: string, data: object, directoryId?: string) {
-    return this.mainigList(listId, directoryId).addContact(data)
+    return this.mailingList(listId, directoryId).addContact(data)
     }
 
   /**
@@ -293,7 +310,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   updateListContact(listId: string, contactId: string, data: object, directoryId?: string) {
-    return this.mainigList(listId, directoryId).updateContact(contactId, data)
+    return this.mailingList(listId, directoryId).updateContact(contactId, data)
   }
 
   /**
