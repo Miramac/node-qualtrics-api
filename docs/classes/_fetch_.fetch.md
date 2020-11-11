@@ -34,7 +34,7 @@
 
 \+ **new Fetch**(`config`: [FetchOptions](../interfaces/_interfaces_options_.fetchoptions.md)): [Fetch](_fetch_.fetch.md)
 
-*Defined in [fetch.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L10)*
+*Defined in [fetch.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L10)*
 
 #### Parameters:
 
@@ -50,7 +50,7 @@ Name | Type |
 
 •  **agent**: any
 
-*Defined in [fetch.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L10)*
+*Defined in [fetch.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L10)*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 •  **baseUrl**: string
 
-*Defined in [fetch.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L9)*
+*Defined in [fetch.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L9)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 •  **headers**: object
 
-*Defined in [fetch.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L8)*
+*Defined in [fetch.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L8)*
 
 ## Methods
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **delete**(`path`: string, `data?`: undefined \| object): any
 
-*Defined in [fetch.ts:83](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L83)*
+*Defined in [fetch.ts:83](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L83)*
 
 DELETE Request
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **get**(`path`: string): Promise\<any>
 
-*Defined in [fetch.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L24)*
+*Defined in [fetch.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L24)*
 
 GET JSON Request Reponse
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **getRaw**(`path`: string): Promise\<Response>
 
-*Defined in [fetch.ts:46](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L46)*
+*Defined in [fetch.ts:46](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L46)*
 
 GET Reponse Object
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **post**(`path`: string, `data`: object): any
 
-*Defined in [fetch.ts:60](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L60)*
+*Defined in [fetch.ts:60](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L60)*
 
 POST Request
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **put**(`path`: string, `data`: object): any
 
-*Defined in [fetch.ts:103](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/fetch.ts#L103)*
+*Defined in [fetch.ts:103](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/fetch.ts#L103)*
 
 #### Parameters:
 

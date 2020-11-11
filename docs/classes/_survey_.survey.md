@@ -25,6 +25,7 @@
 
 * [addDistribution](_survey_.survey.md#adddistribution)
 * [createResponseExport](_survey_.survey.md#createresponseexport)
+* [deleteDistribution](_survey_.survey.md#deletedistribution)
 * [deleteResponse](_survey_.survey.md#deleteresponse)
 * [deleteSession](_survey_.survey.md#deletesession)
 * [downloadResponseExport](_survey_.survey.md#downloadresponseexport)
@@ -40,7 +41,7 @@
 
 \+ **new Survey**(`config`: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md), `id`: string, `directory?`: undefined \| string): [Survey](_survey_.survey.md)
 
-*Defined in [survey.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L10)*
+*Defined in [survey.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L10)*
 
 #### Parameters:
 
@@ -58,7 +59,7 @@ Name | Type |
 
 •  **config**: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)
 
-*Defined in [survey.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L7)*
+*Defined in [survey.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L7)*
 
 ___
 
@@ -66,7 +67,7 @@ ___
 
 •  **directory**: string \| undefined
 
-*Defined in [survey.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L9)*
+*Defined in [survey.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L9)*
 
 ___
 
@@ -74,7 +75,7 @@ ___
 
 •  **fetch**: [Fetch](_fetch_.fetch.md)
 
-*Defined in [survey.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L8)*
+*Defined in [survey.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L8)*
 
 ___
 
@@ -82,7 +83,7 @@ ___
 
 •  **id**: string
 
-*Defined in [survey.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L10)*
+*Defined in [survey.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L10)*
 
 ## Methods
 
@@ -90,7 +91,7 @@ ___
 
 ▸ **addDistribution**(`mailingListId`: string, `data?`: any): any
 
-*Defined in [survey.ts:35](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L35)*
+*Defined in [survey.ts:35](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L35)*
 
 Create a new link distribution
 
@@ -109,7 +110,7 @@ ___
 
 ▸ **createResponseExport**(`options`: object): Promise\<any>
 
-*Defined in [survey.ts:128](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L128)*
+*Defined in [survey.ts:135](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L135)*
 
 #### Parameters:
 
@@ -121,11 +122,27 @@ Name | Type | Description |
 
 ___
 
+### deleteDistribution
+
+▸ **deleteDistribution**(`distributionId`: string): Promise\<any>
+
+*Defined in [survey.ts:64](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L64)*
+
+#### Parameters:
+
+Name | Type | Description |
+------ | ------ | ------ |
+`distributionId` | string |   |
+
+**Returns:** Promise\<any>
+
+___
+
 ### deleteResponse
 
 ▸ **deleteResponse**(`responseId`: string): any
 
-*Defined in [survey.ts:175](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L175)*
+*Defined in [survey.ts:182](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L182)*
 
 Delete survey response
 
@@ -143,7 +160,7 @@ ___
 
 ▸ **deleteSession**(`sessionId`: string): any
 
-*Defined in [survey.ts:100](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L100)*
+*Defined in [survey.ts:107](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L107)*
 
 #### Parameters:
 
@@ -159,7 +176,7 @@ ___
 
 ▸ **downloadResponseExport**(`outputFile`: string, `options`: any): Promise\<void>
 
-*Defined in [survey.ts:111](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L111)*
+*Defined in [survey.ts:118](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L118)*
 
 Create a Exportfile with the survey response data
 
@@ -178,7 +195,7 @@ ___
 
 ▸ **fetchResponseExport**(`fileId`: string, `outputFile`: string): Promise\<unknown>
 
-*Defined in [survey.ts:152](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L152)*
+*Defined in [survey.ts:159](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L159)*
 
 #### Parameters:
 
@@ -195,7 +212,7 @@ ___
 
 ▸ **getAll**(`distributionRequestType?`: undefined \| string): Promise\<any>
 
-*Defined in [survey.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L24)*
+*Defined in [survey.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L24)*
 
 List all survey distributions
 
@@ -211,9 +228,9 @@ ___
 
 ### getLinks
 
-▸ **getLinks**(`distribution`: string): Promise\<any[]>
+▸ **getLinks**(`distributionId`: string): Promise\<any[]>
 
-*Defined in [survey.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L66)*
+*Defined in [survey.ts:73](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L73)*
 
 get all contacts with survey link for one Distribution
 
@@ -221,7 +238,7 @@ get all contacts with survey link for one Distribution
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`distribution` | string | Distribution-ID (eg. EMD_abdfgfdgh4e64) |
+`distributionId` | string | Distribution-ID (eg. EMD_abdfgfdgh4e64) |
 
 **Returns:** Promise\<any[]>
 
@@ -231,7 +248,7 @@ ___
 
 ▸ **getSession**(`sessionId`: string): Promise\<any>
 
-*Defined in [survey.ts:92](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L92)*
+*Defined in [survey.ts:99](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L99)*
 
  get session data
 
@@ -249,7 +266,7 @@ ___
 
 ▸ **responseExportProgress**(`progressId`: string): Promise\<any>
 
-*Defined in [survey.ts:139](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L139)*
+*Defined in [survey.ts:146](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L146)*
 
 #### Parameters:
 

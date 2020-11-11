@@ -20,4 +20,4 @@
 
 • `Const` **delay**: any = require('util').promisify(setTimeout)
 
-*Defined in [survey.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/survey.ts#L4)*
+*Defined in [survey.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/survey.ts#L4)*

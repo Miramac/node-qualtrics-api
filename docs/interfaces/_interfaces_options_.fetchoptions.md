@@ -22,7 +22,7 @@
 
 •  **agent**: any
 
-*Defined in [interfaces/options.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L6)*
+*Defined in [interfaces/options.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L6)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 •  **apiToken**: string
 
-*Defined in [interfaces/options.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L6)*
+*Defined in [interfaces/options.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L6)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 •  **baseUrl**: string
 
-*Defined in [interfaces/options.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L6)*
+*Defined in [interfaces/options.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L6)*

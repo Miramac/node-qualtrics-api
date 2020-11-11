@@ -25,7 +25,7 @@ Qualtrics Login data
 
 •  **agent**: any
 
-*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L4)*
+*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L4)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 •  **apiToken**: string
 
-*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L4)*
+*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L4)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 •  **baseUrl**: string
 
-*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L4)*
+*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L4)*
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 •  **defaultDirectory**: string
 
-*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/22a7b18/lib/interfaces/options.ts#L4)*
+*Defined in [interfaces/options.ts:4](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/interfaces/options.ts#L4)*
