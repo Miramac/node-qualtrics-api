@@ -8,6 +8,7 @@
 
 ### Modules
 
+* ["distribution"](modules/_distribution_.md)
 * ["fetch"](modules/_fetch_.md)
 * ["group"](modules/_group_.md)
 * ["interfaces/options"](modules/_interfaces_options_.md)

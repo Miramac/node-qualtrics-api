@@ -35,7 +35,7 @@
 
 \+ **new IQDirectory**(`config`: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md), `directory?`: undefined \| string): [IQDirectory](_iq_directory_.iqdirectory.md)
 
-*Defined in [iq-directory.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L7)*
+*Defined in iq-directory.ts:7*
 
 #### Parameters:
 
@@ -52,7 +52,7 @@ Name | Type |
 
 •  **config**: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)
 
-*Defined in [iq-directory.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L5)*
+*Defined in iq-directory.ts:5*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 •  **directory**: string \| undefined
 
-*Defined in [iq-directory.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L7)*
+*Defined in iq-directory.ts:7*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 •  **fetch**: [Fetch](_fetch_.fetch.md)
 
-*Defined in [iq-directory.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L6)*
+*Defined in iq-directory.ts:6*
 
 ## Methods
 
@@ -76,7 +76,7 @@ ___
 
 ▸ **getAllContacts**(): Promise\<any[]>
 
-*Defined in [iq-directory.ts:30](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L30)*
+*Defined in iq-directory.ts:30*
 
 Get all Directory Contacts
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **getContact**(`id`: string): Promise\<any>
 
-*Defined in [iq-directory.ts:55](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L55)*
+*Defined in iq-directory.ts:55*
 
 Get data for one Directory Contact
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **getContacts**(`skipToken?`: string \| null): Promise\<any>
 
-*Defined in [iq-directory.ts:22](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L22)*
+*Defined in iq-directory.ts:22*
 
 Get Directory Contacts. PageSize 100
 
@@ -124,7 +124,7 @@ ___
 
 ▸ **removeContact**(`id`: string): any
 
-*Defined in [iq-directory.ts:75](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L75)*
+*Defined in iq-directory.ts:75*
 
 Delete Directory Contact
 
@@ -142,7 +142,7 @@ ___
 
 ▸ **unsubscribedContact**(`id`: string): any
 
-*Defined in [iq-directory.ts:85](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L85)*
+*Defined in iq-directory.ts:85*
 
 Unsubscribed Contact im Directory aus
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **updateContact**(`id`: string, `data`: object): any
 
-*Defined in [iq-directory.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/iq-directory.ts#L66)*
+*Defined in iq-directory.ts:66*
 
 Update Directory Contact
 

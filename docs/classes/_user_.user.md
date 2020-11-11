@@ -31,7 +31,7 @@
 
 \+ **new User**(`config`: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md), `id`: string): [User](_user_.user.md)
 
-*Defined in [user.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/user.ts#L7)*
+*Defined in user.ts:7*
 
 #### Parameters:
 
@@ -48,7 +48,7 @@ Name | Type |
 
 •  **config**: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)
 
-*Defined in [user.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/user.ts#L5)*
+*Defined in user.ts:5*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 •  **fetch**: [Fetch](_fetch_.fetch.md)
 
-*Defined in [user.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/user.ts#L6)*
+*Defined in user.ts:6*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 •  **id**: string
 
-*Defined in [user.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/user.ts#L7)*
+*Defined in user.ts:7*
 
 ## Methods
 
@@ -72,7 +72,7 @@ ___
 
 ▸ **get**(): Promise\<any>
 
-*Defined in [user.ts:31](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/user.ts#L31)*
+*Defined in user.ts:31*
 
 Gets general information about the user
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **update**(`data`: object): any
 
-*Defined in [user.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/user.ts#L54)*
+*Defined in user.ts:54*
 
 Updates user information
 

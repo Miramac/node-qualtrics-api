@@ -37,7 +37,7 @@
 
 \+ **new MailingList**(`config`: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md), `id?`: undefined \| string, `directory?`: undefined \| string): [MailingList](_mailing_list_.mailinglist.md)
 
-*Defined in [mailing-list.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L9)*
+*Defined in mailing-list.ts:9*
 
 #### Parameters:
 
@@ -55,7 +55,7 @@ Name | Type |
 
 •  **config**: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)
 
-*Defined in [mailing-list.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L6)*
+*Defined in mailing-list.ts:6*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 •  **directory**: string \| undefined
 
-*Defined in [mailing-list.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L8)*
+*Defined in mailing-list.ts:8*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 •  **fetch**: [Fetch](_fetch_.fetch.md)
 
-*Defined in [mailing-list.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L7)*
+*Defined in mailing-list.ts:7*
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 •  **id**: string \| undefined
 
-*Defined in [mailing-list.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L9)*
+*Defined in mailing-list.ts:9*
 
 ## Methods
 
@@ -87,7 +87,7 @@ ___
 
 ▸ **add**(`data`: object): any
 
-*Defined in [mailing-list.ts:72](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L72)*
+*Defined in mailing-list.ts:72*
 
 #### Parameters:
 
@@ -103,7 +103,7 @@ ___
 
 ▸ **addContact**(`data`: object): any
 
-*Defined in [mailing-list.ts:42](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L42)*
+*Defined in mailing-list.ts:42*
 
 Add List Contact
 
@@ -121,7 +121,7 @@ ___
 
 ▸ **delete**(): any
 
-*Defined in [mailing-list.ts:82](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L82)*
+*Defined in mailing-list.ts:82*
 
 Update mteh Mailinglist
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **getContact**(`contactId`: string): Promise\<any>
 
-*Defined in [mailing-list.ts:33](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L33)*
+*Defined in mailing-list.ts:33*
 
 Get contact from mailinglists
 
@@ -151,7 +151,7 @@ ___
 
 ▸ **getContacts**(): Promise\<any>
 
-*Defined in [mailing-list.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L24)*
+*Defined in mailing-list.ts:24*
 
 Get all mailinglists contacts
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **removeContact**(`contactId`: String): any
 
-*Defined in [mailing-list.ts:64](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L64)*
+*Defined in mailing-list.ts:64*
 
 Update Daten eines List Contact
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **updateContact**(`contactId`: string, `data`: object): any
 
-*Defined in [mailing-list.ts:53](https://github.com/Miramac/node-qualtrics-api/blob/92e1f71/lib/mailing-list.ts#L53)*
+*Defined in mailing-list.ts:53*
 
 Update Daten eines List Contact
 
