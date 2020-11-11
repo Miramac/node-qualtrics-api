@@ -1,6 +1,7 @@
 import * as fs from 'fs'
 import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
+import { Distribution } from './distribution'
 const delay = require('util').promisify(setTimeout)
 
 export class Survey {
@@ -27,103 +28,74 @@ export class Survey {
   }
 
   /**
-     * Create a new link distribution
-     * @param {String} mailingListId
-     * @param {Object} data
-     * @returns {Promise}
-     */
+   * 
+   * @param distributionId 
+   */
+  distribution(distributionId?: string) {
+    return new Distribution(this.config, this.id, distributionId)
+  }
+  /**
+   * @deprecated
+   * Create a new link distribution
+   *@param {String} mailingListId
+   * @param {Object} data
+   * @returns {Promise}
+   */
   addDistribution(mailingListId: string, data?: any) {
-    const distributionData = {
-      surveyId: this.id,
-      linkType: 'Individual',
-      description: 'distribution description',
-      action: 'CreateDistribution',
-      // Default expirationDate: 90 days
-      expirationDate: (data && data.expirationDate) ? data.expirationDate : new Date(new Date().setDate(new Date().getDate() + 90)).toLocaleDateString() + ' 00:00:00',
-      mailingListId: mailingListId
-    }
-    // overwrite defaults, if available
-    if (data) {
-      if  (data.linkType) {
-        distributionData.linkType = data.linkType
-      }
-      if (data.description) {
-        distributionData.description = data.description
-      }
-      if (data.expirationDate) {
-        distributionData.expirationDate = data.expirationDate
-      }
-    }
-    return this.fetch.post('/distributions', distributionData)
+    return this.distribution().add(mailingListId)
   }
 
   /**
-   *
+   * @deprecated
    * @param distributionId
    */
   async deleteDistribution(distributionId: string) {
-    return this.fetch.delete(`/distributions/${distributionId}`)
+    return this.distribution(distributionId).delete()
   }
 
-  /**
-     * get all contacts with survey link for one Distribution
-     * @param {String} distributionId Distribution-ID (eg. EMD_abdfgfdgh4e64)
-     * @returns {Promise}
-     */
+  /** 
+  * @deprecated
+  * get all contacts with survey link for one Distribution
+  * @param {String} distributionId Distribution-ID (eg. EMD_abdfgfdgh4e64)
+  * @returns {Promise}
+  */
   async getLinks(distributionId: string) {
-    let contacts: any[] = []
-    let skipToken = false
-    try {
-      do {
-        const res: any = await this.fetch.get(`/distributions/${distributionId}/links?surveyId=${this.id}&skipToken=${skipToken || ''}`)
-        if (res.meta.httpStatus !== '200 - OK') {
-          return Promise.reject(new Error(res.meta))
-        }
-        if (res.result) {
-          contacts = contacts.concat(res.result.elements)
-          skipToken = res.result.nextPage
-          skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : skipToken
-        }
-      } while (skipToken)
-      return contacts
-    } catch (e) {
-      return Promise.reject(e)
-    }
+    return this.distribution(distributionId).contacts()
   }
 
   /**
-     *  get session data
+   *  get session data
+   * @param {String} sessionId
+   * @returns {Promise}
+   */
+  getSession(sessionId: string) {
+    return this.fetch.get(`surveys/${this.id}/sessions/${sessionId}`)
+  }
+
+  /**
      * @param {String} sessionId
      * @returns {Promise}
      */
-    getSession (sessionId: string) {
-      return this.fetch.get(`surveys/${this.id}/sessions/${sessionId}`)
-    }
-  
-    /**
-       * @param {String} sessionId
-       * @returns {Promise}
-       */
-    deleteSession (sessionId: string) {
-      return this.fetch.delete(`surveys/${this.id}/sessions/${sessionId}`)
-    }
+  deleteSession(sessionId: string) {
+    return this.fetch.delete(`surveys/${this.id}/sessions/${sessionId}`)
+  }
 
-    
+
   /**
      * Create a Exportfile with the survey response data
      * @param {String} surveyId
      * @param {String} outputFile
      * @param {String|Object} format|options
      */
-  async downloadResponseExport (outputFile: string, options: any) {
+  async downloadResponseExport(outputFile: string, options: any) {
     options = options || {}
     options = (typeof options === 'string') ? { format: options } : options
     options.format = options.format || 'json'
-    const progressId = await this.createResponseExport( options)
+    const progressId = await this.createResponseExport(options)
     if (!progressId) return
     let fileId = null
     while (fileId === null) {
-      fileId = await this.responseExportProgress( progressId)
+      fileId = await this.responseExportProgress(progressId)
       await delay(1000) // wait 1 second for next progess status
     }
     await this.fetchResponseExport(fileId, outputFile)
@@ -132,7 +104,7 @@ export class Survey {
    * 
    * @param options 
    */
-  async createResponseExport (options: object) {
+  async createResponseExport(options: object) {
     const res = await this.fetch.post(`surveys/${this.id}/export-responses`, options)
     if (res.meta.error) {
       throw new Error(res.meta.error.errorMessage)
@@ -143,7 +115,7 @@ export class Survey {
     }
   }
 
-  async responseExportProgress (progressId: string) {
+  async responseExportProgress(progressId: string) {
     const res = await this.fetch.get(`surveys/${this.id}/export-responses/${progressId}`)
     if (res.meta.error) {
       throw new Error(res.meta.error.errorMessage)
@@ -156,7 +128,7 @@ export class Survey {
     }
   }
 
-  fetchResponseExport (fileId: string, outputFile: string) {
+  fetchResponseExport(fileId: string, outputFile: string) {
     return new Promise((resolve, reject) => {
       this.fetch.getRaw(`surveys/${this.id}/export-responses/${fileId}/file`)
         .then((res: any) => {
