@@ -69,8 +69,8 @@ export class MailingList {
    * @param ownerId 
    * @param name
    */
-  add(ownerId: string, name: string) {
-    return this.fetch.post(`/directories/${this.directory}/mailinglists`, {name: name, ownerId: ownerId })
+  add(data: object) {
+    return this.fetch.post(`/directories/${this.directory}/mailinglists`, data)
   }
     /**
    * Update mteh Mailinglist
