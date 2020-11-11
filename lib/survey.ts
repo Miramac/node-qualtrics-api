@@ -33,14 +33,13 @@ export class Survey {
      * @returns {Promise}
      */
   addDistribution(mailingListId: string, data?: any) {
-    // Default expirationDate: 90 days
-    const expirationDate = new Date(new Date().setDate(new Date().getDate() + 90)).toLocaleDateString() + ' 00:00:00'
     const distributionData = {
       surveyId: this.id,
       linkType: 'Individual',
       description: 'distribution description',
       action: 'CreateDistribution',
-      expirationDate: expirationDate,
+      // Default expirationDate: 90 days
+      expirationDate: (data && data.expirationDate) ? data.expirationDate : new Date(new Date().setDate(new Date().getDate() + 90)).toLocaleDateString() + ' 00:00:00',
       mailingListId: mailingListId
     }
     // overwrite defaults, if available
@@ -59,16 +58,24 @@ export class Survey {
   }
 
   /**
+   *
+   * @param distributionId
+   */
+  async deleteDistribution(distributionId: string) {
+    return this.fetch.delete(`/distributions/${distributionId}`)
+  }
+
+  /**
      * get all contacts with survey link for one Distribution
-     * @param {String} distribution Distribution-ID (eg. EMD_abdfgfdgh4e64)
+     * @param {String} distributionId Distribution-ID (eg. EMD_abdfgfdgh4e64)
      * @returns {Promise}
      */
-  async getLinks(distribution: string) {
+  async getLinks(distributionId: string) {
     let contacts: any[] = []
     let skipToken = false
     try {
       do {
-        const res: any = await this.fetch.get(`/distributions/${distribution}/links?surveyId=${this.id}&skipToken=${skipToken || ''}`)
+        const res: any = await this.fetch.get(`/distributions/${distributionId}/links?surveyId=${this.id}&skipToken=${skipToken || ''}`)
         if (res.meta.httpStatus !== '200 - OK') {
           return Promise.reject(new Error(res.meta))
         }
