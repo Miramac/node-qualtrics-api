@@ -19,12 +19,12 @@ export class Survey {
 
   /**
      * List all survey distributions
-     * @param {String} distributionRequestType
+     * @param {String} distributionRequestType ('GeneratedInvite' for Individual Link Distributions)
      * @returns {Promise}
      */
-  getAll(distributionRequestType?: string) {
+    listDistribution(distributionRequestType?: string) {
     distributionRequestType = (distributionRequestType) ? `&distributionRequestType=${distributionRequestType}` : ''
-    return this.fetch.get(`/distributions?this.survey=${this.id}${distributionRequestType}`)
+    return this.fetch.get(`/distributions?surveyId=${this.id}${distributionRequestType}`)
   }
 
   /**
