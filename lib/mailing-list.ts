@@ -1,6 +1,5 @@
 import { QualtricsOptions } from './interfaces/options'
 import { Fetch } from './fetch'
-import { StringifyOptions } from 'querystring'
 
 export class MailingList {
   config: QualtricsOptions
@@ -39,8 +38,27 @@ export class MailingList {
      * @param {Object} data
      * @returns {Promise}
      */
-  addContact(data: object) {
-    return this.fetch.post(`/directories/${this.directory}/mailinglists/${this.id}/contacts/`, data)
+  addContact(contact: object) {
+    return this.fetch.post(`/directories/${this.directory}/mailinglists/${this.id}/contacts/`, contact)
+  }
+  /**
+     * Add List Contact
+     * @param {Object} data
+     * @returns {Promise}
+     */
+  addContacts(contacts: Array<object>) {
+    return new Promise(async (resolve, rejects) => {
+      try {
+        const results = [] 
+        for (let i = 0; i < contacts.length; i++) {
+
+          results.push(await this.fetch.post(`/directories/${this.directory}/mailinglists/${this.id}/contacts/`, contacts[i]))
+        }
+        resolve(results)
+      } catch (e) {
+        rejects(e)
+      }
+    })
   }
 
   /**
