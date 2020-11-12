@@ -319,7 +319,7 @@ class Qualtrics {
      * @returns {Promise}
      */
   getDistributions(surveyId: string, distributionRequestType?: string) {
-    return this.survey(surveyId).getAll(distributionRequestType)
+    return this.survey(surveyId).listDistribution()
   }
 /**
      * Liste aller Distributions für ein Projekt
