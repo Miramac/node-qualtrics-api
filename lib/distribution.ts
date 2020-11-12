@@ -27,11 +27,12 @@ export class Distribution {
   add(mailingListId: string, data?: any) {
     const distributionData = {
       surveyId: this.surveyId,
+      // Default Link distribution
       linkType: 'Individual',
       description: 'distribution description',
       action: 'CreateDistribution',
       // Default expirationDate: 90 days
-      expirationDate: (data && data.expirationDate) ? data.expirationDate : new Date(new Date().setDate(new Date().getDate() + 90)).toLocaleDateString() + ' 00:00:00',
+      expirationDate: new Date(new Date().setDate(new Date().getDate() + 90)).toLocaleDateString() + ' 00:00:00',
       mailingListId: mailingListId
     }
     // overwrite defaults, if available
@@ -77,7 +78,12 @@ export class Distribution {
           skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : skipToken
         }
       } while (skipToken)
-      return contacts
+      return { 
+        result: { 
+          contacts: { 
+            contacts}  
+        } 
+      }
     } catch (e) {
       return Promise.reject(e)
     }
