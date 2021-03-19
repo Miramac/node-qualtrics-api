@@ -32,7 +32,7 @@ export class Distribution {
       description: 'distribution description',
       action: 'CreateDistribution',
       // Default expirationDate: 90 days
-      expirationDate: new Date(new Date().setDate(new Date().getDate() + 90)).toISOString(),
+      expirationDate: new Date(new Date().setDate(new Date().getDate() + 90)).toISOString().split('T')[0] + ' 00:00:00',
       mailingListId: mailingListId
     }
     // overwrite defaults, if available
