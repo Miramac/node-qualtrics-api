@@ -79,10 +79,7 @@ export class Distribution {
         }
       } while (skipToken)
       return { 
-        result: { 
-          contacts: { 
-            contacts}  
-        } 
+        result: { contacts } 
       }
     } catch (e) {
       return Promise.reject(e)
