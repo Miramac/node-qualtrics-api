@@ -51,7 +51,6 @@ export class MailingList {
       try {
         const results = [] 
         for (let i = 0; i < contacts.length; i++) {
-
           results.push(await this.fetch.post(`/directories/${this.directory}/mailinglists/${this.id}/contacts/`, contacts[i]))
         }
         resolve(results)
