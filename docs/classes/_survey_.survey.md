@@ -31,9 +31,9 @@
 * [distribution](_survey_.survey.md#distribution)
 * [downloadResponseExport](_survey_.survey.md#downloadresponseexport)
 * [fetchResponseExport](_survey_.survey.md#fetchresponseexport)
-* [getAll](_survey_.survey.md#getall)
 * [getLinks](_survey_.survey.md#getlinks)
 * [getSession](_survey_.survey.md#getsession)
+* [listDistribution](_survey_.survey.md#listdistribution)
 * [responseExportProgress](_survey_.survey.md#responseexportprogress)
 
 ## Constructors
@@ -228,27 +228,9 @@ Name | Type |
 
 ___
 
-### getAll
-
-▸ **getAll**(`distributionRequestType?`: undefined \| string): Promise\<any>
-
-*Defined in survey.ts:25*
-
-List all survey distributions
-
-#### Parameters:
-
-Name | Type |
------- | ------ |
-`distributionRequestType?` | undefined \| string |
-
-**Returns:** Promise\<any>
-
-___
-
 ### getLinks
 
-▸ **getLinks**(`distributionId`: string): Promise\<any[]>
+▸ **getLinks**(`distributionId`: string): Promise\<{ result: { contacts: any[]  }  }>
 
 *Defined in survey.ts:62*
 
@@ -261,7 +243,7 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `distributionId` | string | Distribution-ID (eg. EMD_abdfgfdgh4e64) |
 
-**Returns:** Promise\<any[]>
+**Returns:** Promise\<{ result: { contacts: any[]  }  }>
 
 ___
 
@@ -278,6 +260,24 @@ ___
 Name | Type |
 ------ | ------ |
 `sessionId` | string |
+
+**Returns:** Promise\<any>
+
+___
+
+### listDistribution
+
+▸ **listDistribution**(`distributionRequestType?`: undefined \| string): Promise\<any>
+
+*Defined in survey.ts:25*
+
+List all survey distributions
+
+#### Parameters:
+
+Name | Type | Description |
+------ | ------ | ------ |
+`distributionRequestType?` | undefined \| string | ('GeneratedInvite' for Individual Link Distributions) |
 
 **Returns:** Promise\<any>
 

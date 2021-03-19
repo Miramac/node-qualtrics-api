@@ -25,6 +25,7 @@
 
 * [add](_mailing_list_.mailinglist.md#add)
 * [addContact](_mailing_list_.mailinglist.md#addcontact)
+* [addContacts](_mailing_list_.mailinglist.md#addcontacts)
 * [delete](_mailing_list_.mailinglist.md#delete)
 * [getContact](_mailing_list_.mailinglist.md#getcontact)
 * [getContacts](_mailing_list_.mailinglist.md#getcontacts)
@@ -37,7 +38,7 @@
 
 \+ **new MailingList**(`config`: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md), `id?`: undefined \| string, `directory?`: undefined \| string): [MailingList](_mailing_list_.mailinglist.md)
 
-*Defined in mailing-list.ts:9*
+*Defined in mailing-list.ts:8*
 
 #### Parameters:
 
@@ -55,7 +56,7 @@ Name | Type |
 
 •  **config**: [QualtricsOptions](../interfaces/_interfaces_options_.qualtricsoptions.md)
 
-*Defined in mailing-list.ts:6*
+*Defined in mailing-list.ts:5*
 
 ___
 
@@ -63,7 +64,7 @@ ___
 
 •  **directory**: string \| undefined
 
-*Defined in mailing-list.ts:8*
+*Defined in mailing-list.ts:7*
 
 ___
 
@@ -71,7 +72,7 @@ ___
 
 •  **fetch**: [Fetch](_fetch_.fetch.md)
 
-*Defined in mailing-list.ts:7*
+*Defined in mailing-list.ts:6*
 
 ___
 
@@ -79,7 +80,7 @@ ___
 
 •  **id**: string \| undefined
 
-*Defined in mailing-list.ts:9*
+*Defined in mailing-list.ts:8*
 
 ## Methods
 
@@ -87,7 +88,7 @@ ___
 
 ▸ **add**(`data`: object): any
 
-*Defined in mailing-list.ts:72*
+*Defined in mailing-list.ts:89*
 
 #### Parameters:
 
@@ -101,9 +102,9 @@ ___
 
 ### addContact
 
-▸ **addContact**(`data`: object): any
+▸ **addContact**(`contact`: object): any
 
-*Defined in mailing-list.ts:42*
+*Defined in mailing-list.ts:41*
 
 Add List Contact
 
@@ -111,9 +112,27 @@ Add List Contact
 
 Name | Type |
 ------ | ------ |
-`data` | object |
+`contact` | object |
 
 **Returns:** any
+
+___
+
+### addContacts
+
+▸ **addContacts**(`contacts`: Array\<object>): Promise\<unknown>
+
+*Defined in mailing-list.ts:49*
+
+Add List Contact
+
+#### Parameters:
+
+Name | Type |
+------ | ------ |
+`contacts` | Array\<object> |
+
+**Returns:** Promise\<unknown>
 
 ___
 
@@ -121,7 +140,7 @@ ___
 
 ▸ **delete**(): any
 
-*Defined in mailing-list.ts:82*
+*Defined in mailing-list.ts:99*
 
 Update mteh Mailinglist
 
@@ -133,7 +152,7 @@ ___
 
 ▸ **getContact**(`contactId`: string): Promise\<any>
 
-*Defined in mailing-list.ts:33*
+*Defined in mailing-list.ts:32*
 
 Get contact from mailinglists
 
@@ -151,7 +170,7 @@ ___
 
 ▸ **getContacts**(): Promise\<any>
 
-*Defined in mailing-list.ts:24*
+*Defined in mailing-list.ts:23*
 
 Get all mailinglists contacts
 
@@ -163,7 +182,7 @@ ___
 
 ▸ **removeContact**(`contactId`: String): any
 
-*Defined in mailing-list.ts:64*
+*Defined in mailing-list.ts:81*
 
 Update Daten eines List Contact
 
@@ -181,7 +200,7 @@ ___
 
 ▸ **updateContact**(`contactId`: string, `data`: object): any
 
-*Defined in mailing-list.ts:53*
+*Defined in mailing-list.ts:70*
 
 Update Daten eines List Contact
 

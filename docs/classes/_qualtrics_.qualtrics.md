@@ -363,7 +363,7 @@ ___
 
 ### getDistributionLinks
 
-▸ **getDistributionLinks**(`surveyId`: string, `distributionId`: string): Promise\<any[]>
+▸ **getDistributionLinks**(`surveyId`: string, `distributionId`: string): Promise\<{ result: { contacts: any[]  }  }>
 
 *Defined in qualtrics.ts:342*
 
@@ -378,7 +378,7 @@ Name | Type |
 `surveyId` | string |
 `distributionId` | string |
 
-**Returns:** Promise\<any[]>
+**Returns:** Promise\<{ result: { contacts: any[]  }  }>
 
 ___
 

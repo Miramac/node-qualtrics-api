@@ -110,13 +110,13 @@ ___
 
 ### contacts
 
-▸ **contacts**(): Promise\<any[]>
+▸ **contacts**(): Promise\<{ result: { contacts: any[]  }  }>
 
-*Defined in distribution.ts:65*
+*Defined in distribution.ts:66*
 
 get all contacts with survey link for one Distribution
 
-**Returns:** Promise\<any[]>
+**Returns:** Promise\<{ result: { contacts: any[]  }  }>
 
 ___
 
@@ -124,6 +124,6 @@ ___
 
 ▸ **delete**(): Promise\<any>
 
-*Defined in distribution.ts:56*
+*Defined in distribution.ts:57*
 
 **Returns:** Promise\<any>
