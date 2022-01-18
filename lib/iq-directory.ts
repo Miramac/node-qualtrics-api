@@ -16,11 +16,14 @@ export class IQDirectory {
 
   /**
      * Get Directory Contacts. PageSize 100
-     * @param {String} skipToken
+     * @param {String} nextPage
      * @returns {Promise}
      */
-    getContacts(skipToken?: string | null): Promise<any> {
-      return this.fetch.get(`/directories/${this.directory}/contacts/?pageSize=100${(skipToken) ? '&skipToken=' + skipToken : ''}`)
+    getContacts(nextPage?: string | null): Promise<any> {
+      if (nextPage) {
+        return this.fetch.get(nextPage)
+      }
+      return this.fetch.get(`/directories/${this.directory}/contacts/?pageSize=100`)
     }
   
     /**
@@ -29,24 +32,59 @@ export class IQDirectory {
        */
     async getAllContacts () {
       let contacts: any[] = []
-      let skipToken = null
+      let nextPage = null
       try {
         do {
           try {
-            const res:any = await this.getContacts(skipToken)
+            const res:any = await this.getContacts(nextPage)
             contacts = contacts.concat(res.result.elements)
-            skipToken = res.result.nextPage
-            skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : skipToken
+            nextPage = res.result.nextPage
           } catch(e) {
             return Promise.reject(e)
           }
-        } while (skipToken)
+        } while (nextPage)
         return contacts
       } catch (e) {
         return Promise.reject(e)
       }
     }
   
+    /**
+     * Retrieve the contacts in a directory who have opted out.
+     * @param nextPage 
+     * @returns {Promise}
+     */
+    getOptedOutContacts (nextPage?: string | null): Promise<any> {
+      if (nextPage) {
+      return this.fetch.get(nextPage)
+      }
+      return this.fetch.get(`/directories/${this.directory}/contacts/optedOutContacts/?pageSize=100`)
+       
+    }
+
+    /**
+     * Retrieve all the contacts in a directory who have opted out.
+     * @returns {Promise}
+     */
+     async getAllOptedOutContacts () {
+        let contacts: any[] = []
+        let nextPage = null
+        try {
+          do {
+            try {
+              const res:any = await this.getOptedOutContacts(nextPage)
+              contacts = contacts.concat(res.result.elements)
+              nextPage = res.result.nextPage
+            } catch(e) {
+              return Promise.reject(e)
+            }
+          } while (nextPage)
+          return contacts
+        } catch (e) {
+          return Promise.reject(e)
+        }
+      }
+
     /**
        * Get data for one Directory Contact
        * @param {String} id Contact ID
