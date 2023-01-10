@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[user.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/user.ts#L9)
+[user.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/user.ts#L9)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[user.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/user.ts#L5)
+[user.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/user.ts#L5)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[user.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/user.ts#L6)
+[user.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/user.ts#L6)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[user.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/user.ts#L7)
+[user.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/user.ts#L7)
 
 ## Methods
 
@@ -98,7 +98,7 @@ user.get()
 
 #### Defined in
 
-[user.ts:31](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/user.ts#L31)
+[user.ts:31](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/user.ts#L31)
 
 ___
 
@@ -139,4 +139,4 @@ user.update( {
 
 #### Defined in
 
-[user.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/user.ts#L54)
+[user.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/user.ts#L54)

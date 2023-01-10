@@ -78,7 +78,7 @@ Creates a new Qualtrics instance.
 
 #### Defined in
 
-[qualtrics.ts:34](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L34)
+[qualtrics.ts:34](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L34)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Creates a new Qualtrics instance.
 
 #### Defined in
 
-[qualtrics.ts:19](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L19)
+[qualtrics.ts:19](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L19)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:20](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L20)
+[qualtrics.ts:20](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L20)
 
 ## Methods
 
@@ -123,7 +123,7 @@ Liste aller Distributions für ein Projekt
 
 #### Defined in
 
-[qualtrics.ts:331](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L331)
+[qualtrics.ts:331](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L331)
 
 ___
 
@@ -149,7 +149,7 @@ Creates a new group
 
 #### Defined in
 
-[qualtrics.ts:153](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L153)
+[qualtrics.ts:153](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L153)
 
 ___
 
@@ -174,7 +174,7 @@ Add User to Group
 
 #### Defined in
 
-[qualtrics.ts:164](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L164)
+[qualtrics.ts:164](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L164)
 
 ___
 
@@ -200,7 +200,7 @@ Add List Contact
 
 #### Defined in
 
-[qualtrics.ts:289](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L289)
+[qualtrics.ts:289](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L289)
 
 ___
 
@@ -216,7 +216,7 @@ Gets list of all groups known to the user account
 
 #### Defined in
 
-[qualtrics.ts:123](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L123)
+[qualtrics.ts:123](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L123)
 
 ___
 
@@ -247,7 +247,7 @@ https://api.qualtrics.com/reference#list-users
 
 #### Defined in
 
-[qualtrics.ts:72](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L72)
+[qualtrics.ts:72](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L72)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:362](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L362)
+[qualtrics.ts:362](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L362)
 
 ___
 
@@ -295,7 +295,7 @@ Delete survey response
 
 #### Defined in
 
-[qualtrics.ts:382](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L382)
+[qualtrics.ts:382](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L382)
 
 ___
 
@@ -315,7 +315,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:179](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L179)
+[qualtrics.ts:179](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L179)
 
 ___
 
@@ -339,7 +339,7 @@ Create a Exportfile with the survey response data
 
 #### Defined in
 
-[qualtrics.ts:372](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L372)
+[qualtrics.ts:372](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L372)
 
 ___
 
@@ -363,7 +363,7 @@ Get all Directory Contacts
 
 #### Defined in
 
-[qualtrics.ts:199](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L199)
+[qualtrics.ts:199](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L199)
 
 ___
 
@@ -388,7 +388,7 @@ Get data for one Directory Contact
 
 #### Defined in
 
-[qualtrics.ts:210](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L210)
+[qualtrics.ts:210](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L210)
 
 ___
 
@@ -413,7 +413,7 @@ Get Directory Contacts. PageSize 100
 
 #### Defined in
 
-[qualtrics.ts:189](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L189)
+[qualtrics.ts:189](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L189)
 
 ___
 
@@ -438,7 +438,7 @@ Liste aller Kontakte einer Distribution
 
 #### Defined in
 
-[qualtrics.ts:342](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L342)
+[qualtrics.ts:342](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L342)
 
 ___
 
@@ -463,7 +463,7 @@ Liste aller Distributions für ein Projekt
 
 #### Defined in
 
-[qualtrics.ts:321](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L321)
+[qualtrics.ts:321](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L321)
 
 ___
 
@@ -487,7 +487,7 @@ Gets information about a specified group
 
 #### Defined in
 
-[qualtrics.ts:141](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L141)
+[qualtrics.ts:141](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L141)
 
 ___
 
@@ -505,7 +505,7 @@ Gets list of all groups known to the user account
 
 #### Defined in
 
-[qualtrics.ts:131](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L131)
+[qualtrics.ts:131](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L131)
 
 ___
 
@@ -531,7 +531,7 @@ Get contact from mailinglists
 
 #### Defined in
 
-[qualtrics.ts:277](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L277)
+[qualtrics.ts:277](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L277)
 
 ___
 
@@ -556,7 +556,7 @@ Get all mailinglists contacts
 
 #### Defined in
 
-[qualtrics.ts:265](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L265)
+[qualtrics.ts:265](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L265)
 
 ___
 
@@ -579,7 +579,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:352](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L352)
+[qualtrics.ts:352](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L352)
 
 ___
 
@@ -609,7 +609,7 @@ https://api.qualtrics.com/reference#get-user
 
 #### Defined in
 
-[qualtrics.ts:101](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L101)
+[qualtrics.ts:101](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L101)
 
 ___
 
@@ -644,7 +644,7 @@ https://api.qualtrics.com/reference#list-users
 
 #### Defined in
 
-[qualtrics.ts:90](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L90)
+[qualtrics.ts:90](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L90)
 
 ___
 
@@ -664,7 +664,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:116](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L116)
+[qualtrics.ts:116](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L116)
 
 ___
 
@@ -687,7 +687,7 @@ MailingList
 
 #### Defined in
 
-[qualtrics.ts:254](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L254)
+[qualtrics.ts:254](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L254)
 
 ___
 
@@ -712,7 +712,7 @@ Delete Directory Contact
 
 #### Defined in
 
-[qualtrics.ts:233](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L233)
+[qualtrics.ts:233](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L233)
 
 ___
 
@@ -737,7 +737,7 @@ Remove User from Group
 
 #### Defined in
 
-[qualtrics.ts:175](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L175)
+[qualtrics.ts:175](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L175)
 
 ___
 
@@ -759,7 +759,7 @@ Returns a new survey distribution object
 
 #### Defined in
 
-[qualtrics.ts:311](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L311)
+[qualtrics.ts:311](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L311)
 
 ___
 
@@ -784,7 +784,7 @@ Unsubscribed Contact im Directory aus
 
 #### Defined in
 
-[qualtrics.ts:244](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L244)
+[qualtrics.ts:244](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L244)
 
 ___
 
@@ -810,7 +810,7 @@ Update Directory Contact
 
 #### Defined in
 
-[qualtrics.ts:222](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L222)
+[qualtrics.ts:222](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L222)
 
 ___
 
@@ -837,7 +837,7 @@ Update Daten eines List Contact
 
 #### Defined in
 
-[qualtrics.ts:302](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L302)
+[qualtrics.ts:302](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L302)
 
 ___
 
@@ -864,7 +864,7 @@ Use: user('id').update({data})
 
 #### Defined in
 
-[qualtrics.ts:112](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L112)
+[qualtrics.ts:112](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L112)
 
 ___
 
@@ -889,7 +889,7 @@ const user = qualtrics.user('UR_1A2B3C4d5E6F7G8)
 
 #### Defined in
 
-[qualtrics.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L54)
+[qualtrics.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L54)
 
 ___
 
@@ -909,4 +909,4 @@ https://api.qualtrics.com/reference#who-am-i
 
 #### Defined in
 
-[qualtrics.ts:43](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/qualtrics.ts#L43)
+[qualtrics.ts:43](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/qualtrics.ts#L43)

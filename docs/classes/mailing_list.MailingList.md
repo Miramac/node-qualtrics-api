@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[mailing-list.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L10)
+[mailing-list.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L10)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[mailing-list.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L5)
+[mailing-list.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L5)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[mailing-list.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L7)
+[mailing-list.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L7)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[mailing-list.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L6)
+[mailing-list.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L6)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[mailing-list.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L8)
+[mailing-list.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L8)
 
 ## Methods
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[mailing-list.ts:89](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L89)
+[mailing-list.ts:89](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L89)
 
 ___
 
@@ -126,7 +126,7 @@ Add List Contact
 
 #### Defined in
 
-[mailing-list.ts:41](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L41)
+[mailing-list.ts:41](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L41)
 
 ___
 
@@ -148,7 +148,7 @@ Add List Contact
 
 #### Defined in
 
-[mailing-list.ts:49](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L49)
+[mailing-list.ts:49](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L49)
 
 ___
 
@@ -164,7 +164,7 @@ Update mteh Mailinglist
 
 #### Defined in
 
-[mailing-list.ts:99](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L99)
+[mailing-list.ts:99](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L99)
 
 ___
 
@@ -186,7 +186,7 @@ Get contact from mailinglists
 
 #### Defined in
 
-[mailing-list.ts:32](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L32)
+[mailing-list.ts:32](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L32)
 
 ___
 
@@ -202,7 +202,7 @@ Get all mailinglists contacts
 
 #### Defined in
 
-[mailing-list.ts:23](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L23)
+[mailing-list.ts:23](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L23)
 
 ___
 
@@ -224,7 +224,7 @@ Update Daten eines List Contact
 
 #### Defined in
 
-[mailing-list.ts:81](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L81)
+[mailing-list.ts:81](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L81)
 
 ___
 
@@ -247,4 +247,4 @@ Update Daten eines List Contact
 
 #### Defined in
 
-[mailing-list.ts:70](https://github.com/Miramac/node-qualtrics-api/blob/8bb8f77/lib/mailing-list.ts#L70)
+[mailing-list.ts:70](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/mailing-list.ts#L70)
