@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [export&#x3D;](../classes/qualtrics.export_.md)
+- [Qualtrics](../classes/qualtrics.Qualtrics.md)

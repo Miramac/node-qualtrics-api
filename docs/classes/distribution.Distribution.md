@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[distribution.ts:13](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L13)
+[distribution.ts:13](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L13)
 
 ## Properties
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[distribution.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L7)
+[distribution.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L7)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[distribution.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L9)
+[distribution.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L9)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[distribution.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L8)
+[distribution.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L8)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[distribution.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L10)
+[distribution.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L10)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[distribution.ts:11](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L11)
+[distribution.ts:11](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L11)
 
 ## Methods
 
@@ -115,7 +115,7 @@ Create a new link distribution
 
 #### Defined in
 
-[distribution.ts:27](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L27)
+[distribution.ts:27](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L27)
 
 ___
 
@@ -131,7 +131,7 @@ get all contacts with survey link for one Distribution
 
 #### Defined in
 
-[distribution.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L66)
+[distribution.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L66)
 
 ___
 
@@ -145,4 +145,4 @@ ___
 
 #### Defined in
 
-[distribution.ts:57](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/distribution.ts#L57)
+[distribution.ts:57](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/distribution.ts#L57)

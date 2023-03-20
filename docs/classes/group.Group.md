@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[group.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L9)
+[group.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L9)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[group.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L5)
+[group.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L5)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[group.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L6)
+[group.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L6)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[group.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L7)
+[group.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L7)
 
 ## Methods
 
@@ -94,7 +94,7 @@ Creates a new group
 
 #### Defined in
 
-[group.ts:41](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L41)
+[group.ts:52](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L52)
 
 ___
 
@@ -116,7 +116,7 @@ Add User to Group
 
 #### Defined in
 
-[group.ts:56](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L56)
+[group.ts:67](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L67)
 
 ___
 
@@ -132,23 +132,23 @@ Gets information about a specified group
 
 #### Defined in
 
-[group.ts:21](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L21)
+[group.ts:21](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L21)
 
 ___
 
 ### getAll
 
-▸ **getAll**(): `Promise`<`any`\>
+▸ **getAll**(): `Promise`<`any`[]\>
 
 Gets all groups
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`<`any`[]\>
 
 #### Defined in
 
-[group.ts:30](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L30)
+[group.ts:29](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L29)
 
 ___
 
@@ -164,7 +164,7 @@ List Users from Group
 
 #### Defined in
 
-[group.ts:76](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L76)
+[group.ts:87](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L87)
 
 ___
 
@@ -186,4 +186,4 @@ Remove User from Group
 
 #### Defined in
 
-[group.ts:68](https://github.com/Miramac/node-qualtrics-api/blob/b367d7f/lib/group.ts#L68)
+[group.ts:79](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/group.ts#L79)
