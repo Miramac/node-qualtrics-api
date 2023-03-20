@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [Qualtrics](../classes/qualtrics.Qualtrics.md)
+- [default](../classes/qualtrics.default.md)

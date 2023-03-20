@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[iq-directory.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L9)
+[iq-directory.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L9)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[iq-directory.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L5)
+[iq-directory.ts:5](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L5)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[iq-directory.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L7)
+[iq-directory.ts:7](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L7)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[iq-directory.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L6)
+[iq-directory.ts:6](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L6)
 
 ## Methods
 
@@ -86,7 +86,7 @@ Get all Directory Contacts
 
 #### Defined in
 
-[iq-directory.ts:30](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L30)
+[iq-directory.ts:30](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L30)
 
 ___
 
@@ -108,7 +108,7 @@ Get data for one Directory Contact
 
 #### Defined in
 
-[iq-directory.ts:55](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L55)
+[iq-directory.ts:55](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L55)
 
 ___
 
@@ -130,7 +130,7 @@ Get Directory Contacts. PageSize 100
 
 #### Defined in
 
-[iq-directory.ts:22](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L22)
+[iq-directory.ts:22](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L22)
 
 ___
 
@@ -152,7 +152,7 @@ Delete Directory Contact
 
 #### Defined in
 
-[iq-directory.ts:75](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L75)
+[iq-directory.ts:75](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L75)
 
 ___
 
@@ -174,7 +174,7 @@ Unsubscribed Contact im Directory aus
 
 #### Defined in
 
-[iq-directory.ts:85](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L85)
+[iq-directory.ts:85](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L85)
 
 ___
 
@@ -197,4 +197,4 @@ Update Directory Contact
 
 #### Defined in
 
-[iq-directory.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/iq-directory.ts#L66)
+[iq-directory.ts:66](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/iq-directory.ts#L66)

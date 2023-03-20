@@ -1,8 +1,8 @@
-[qualtrics-api](../README.md) / [Exports](../modules.md) / [qualtrics](../modules/qualtrics.md) / Qualtrics
+[qualtrics-api](../README.md) / [Exports](../modules.md) / [qualtrics](../modules/qualtrics.md) / default
 
-# Class: Qualtrics
+# Class: default
 
-[qualtrics](../modules/qualtrics.md).Qualtrics
+[qualtrics](../modules/qualtrics.md).default
 
 Creates a new Qualtrics instance.
 
@@ -10,54 +10,54 @@ Creates a new Qualtrics instance.
 
 ### Constructors
 
-- [constructor](qualtrics.Qualtrics.md#constructor)
+- [constructor](qualtrics.default.md#constructor)
 
 ### Properties
 
-- [config](qualtrics.Qualtrics.md#config)
-- [fetch](qualtrics.Qualtrics.md#fetch)
+- [config](qualtrics.default.md#config)
+- [fetch](qualtrics.default.md#fetch)
 
 ### Methods
 
-- [addDistribution](qualtrics.Qualtrics.md#adddistribution)
-- [addGroup](qualtrics.Qualtrics.md#addgroup)
-- [addGroupMember](qualtrics.Qualtrics.md#addgroupmember)
-- [addListContact](qualtrics.Qualtrics.md#addlistcontact)
-- [allGroups](qualtrics.Qualtrics.md#allgroups)
-- [allUsers](qualtrics.Qualtrics.md#allusers)
-- [deleteSession](qualtrics.Qualtrics.md#deletesession)
-- [deleteSurveyResponse](qualtrics.Qualtrics.md#deletesurveyresponse)
-- [directory](qualtrics.Qualtrics.md#directory)
-- [downloadResponseExport](qualtrics.Qualtrics.md#downloadresponseexport)
-- [getAllDirectoryContacts](qualtrics.Qualtrics.md#getalldirectorycontacts)
-- [getDirectoryContact](qualtrics.Qualtrics.md#getdirectorycontact)
-- [getDirectoryContacts](qualtrics.Qualtrics.md#getdirectorycontacts)
-- [getDistributionLinks](qualtrics.Qualtrics.md#getdistributionlinks)
-- [getDistributions](qualtrics.Qualtrics.md#getdistributions)
-- [getGroup](qualtrics.Qualtrics.md#getgroup)
-- [getGroups](qualtrics.Qualtrics.md#getgroups)
-- [getListContact](qualtrics.Qualtrics.md#getlistcontact)
-- [getListContacts](qualtrics.Qualtrics.md#getlistcontacts)
-- [getSession](qualtrics.Qualtrics.md#getsession)
-- [getUser](qualtrics.Qualtrics.md#getuser)
-- [getUsers](qualtrics.Qualtrics.md#getusers)
-- [group](qualtrics.Qualtrics.md#group)
-- [mailingList](qualtrics.Qualtrics.md#mailinglist)
-- [removeDirectoryContact](qualtrics.Qualtrics.md#removedirectorycontact)
-- [removeGroupMember](qualtrics.Qualtrics.md#removegroupmember)
-- [survey](qualtrics.Qualtrics.md#survey)
-- [unsubscribedDirectoryContact](qualtrics.Qualtrics.md#unsubscribeddirectorycontact)
-- [updateDirectoryContact](qualtrics.Qualtrics.md#updatedirectorycontact)
-- [updateListContact](qualtrics.Qualtrics.md#updatelistcontact)
-- [updateUser](qualtrics.Qualtrics.md#updateuser)
-- [user](qualtrics.Qualtrics.md#user)
-- [whoami](qualtrics.Qualtrics.md#whoami)
+- [addDistribution](qualtrics.default.md#adddistribution)
+- [addGroup](qualtrics.default.md#addgroup)
+- [addGroupMember](qualtrics.default.md#addgroupmember)
+- [addListContact](qualtrics.default.md#addlistcontact)
+- [allGroups](qualtrics.default.md#allgroups)
+- [allUsers](qualtrics.default.md#allusers)
+- [deleteSession](qualtrics.default.md#deletesession)
+- [deleteSurveyResponse](qualtrics.default.md#deletesurveyresponse)
+- [directory](qualtrics.default.md#directory)
+- [downloadResponseExport](qualtrics.default.md#downloadresponseexport)
+- [getAllDirectoryContacts](qualtrics.default.md#getalldirectorycontacts)
+- [getDirectoryContact](qualtrics.default.md#getdirectorycontact)
+- [getDirectoryContacts](qualtrics.default.md#getdirectorycontacts)
+- [getDistributionLinks](qualtrics.default.md#getdistributionlinks)
+- [getDistributions](qualtrics.default.md#getdistributions)
+- [getGroup](qualtrics.default.md#getgroup)
+- [getGroups](qualtrics.default.md#getgroups)
+- [getListContact](qualtrics.default.md#getlistcontact)
+- [getListContacts](qualtrics.default.md#getlistcontacts)
+- [getSession](qualtrics.default.md#getsession)
+- [getUser](qualtrics.default.md#getuser)
+- [getUsers](qualtrics.default.md#getusers)
+- [group](qualtrics.default.md#group)
+- [mailingList](qualtrics.default.md#mailinglist)
+- [removeDirectoryContact](qualtrics.default.md#removedirectorycontact)
+- [removeGroupMember](qualtrics.default.md#removegroupmember)
+- [survey](qualtrics.default.md#survey)
+- [unsubscribedDirectoryContact](qualtrics.default.md#unsubscribeddirectorycontact)
+- [updateDirectoryContact](qualtrics.default.md#updatedirectorycontact)
+- [updateListContact](qualtrics.default.md#updatelistcontact)
+- [updateUser](qualtrics.default.md#updateuser)
+- [user](qualtrics.default.md#user)
+- [whoami](qualtrics.default.md#whoami)
 
 ## Constructors
 
 ### constructor
 
-• **new Qualtrics**(`config`)
+• **new default**(`config`)
 
 **`Example`**
 
@@ -78,7 +78,7 @@ Creates a new Qualtrics instance.
 
 #### Defined in
 
-[qualtrics.ts:34](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L34)
+[qualtrics.ts:35](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L35)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Creates a new Qualtrics instance.
 
 #### Defined in
 
-[qualtrics.ts:19](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L19)
+[qualtrics.ts:20](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L20)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:20](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L20)
+[qualtrics.ts:21](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L21)
 
 ## Methods
 
@@ -123,7 +123,7 @@ Liste aller Distributions für ein Projekt
 
 #### Defined in
 
-[qualtrics.ts:331](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L331)
+[qualtrics.ts:332](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L332)
 
 ___
 
@@ -149,7 +149,7 @@ Creates a new group
 
 #### Defined in
 
-[qualtrics.ts:153](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L153)
+[qualtrics.ts:154](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L154)
 
 ___
 
@@ -174,7 +174,7 @@ Add User to Group
 
 #### Defined in
 
-[qualtrics.ts:164](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L164)
+[qualtrics.ts:165](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L165)
 
 ___
 
@@ -200,7 +200,7 @@ Add List Contact
 
 #### Defined in
 
-[qualtrics.ts:289](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L289)
+[qualtrics.ts:290](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L290)
 
 ___
 
@@ -216,7 +216,7 @@ Gets list of all groups known to the user account
 
 #### Defined in
 
-[qualtrics.ts:123](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L123)
+[qualtrics.ts:124](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L124)
 
 ___
 
@@ -247,7 +247,7 @@ https://api.qualtrics.com/reference#list-users
 
 #### Defined in
 
-[qualtrics.ts:72](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L72)
+[qualtrics.ts:73](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L73)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:362](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L362)
+[qualtrics.ts:363](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L363)
 
 ___
 
@@ -295,7 +295,7 @@ Delete survey response
 
 #### Defined in
 
-[qualtrics.ts:382](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L382)
+[qualtrics.ts:383](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L383)
 
 ___
 
@@ -315,7 +315,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:179](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L179)
+[qualtrics.ts:180](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L180)
 
 ___
 
@@ -339,7 +339,7 @@ Create a Exportfile with the survey response data
 
 #### Defined in
 
-[qualtrics.ts:372](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L372)
+[qualtrics.ts:373](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L373)
 
 ___
 
@@ -363,7 +363,7 @@ Get all Directory Contacts
 
 #### Defined in
 
-[qualtrics.ts:199](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L199)
+[qualtrics.ts:200](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L200)
 
 ___
 
@@ -388,7 +388,7 @@ Get data for one Directory Contact
 
 #### Defined in
 
-[qualtrics.ts:210](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L210)
+[qualtrics.ts:211](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L211)
 
 ___
 
@@ -413,7 +413,7 @@ Get Directory Contacts. PageSize 100
 
 #### Defined in
 
-[qualtrics.ts:189](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L189)
+[qualtrics.ts:190](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L190)
 
 ___
 
@@ -438,7 +438,7 @@ Liste aller Kontakte einer Distribution
 
 #### Defined in
 
-[qualtrics.ts:342](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L342)
+[qualtrics.ts:343](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L343)
 
 ___
 
@@ -463,7 +463,7 @@ Liste aller Distributions für ein Projekt
 
 #### Defined in
 
-[qualtrics.ts:321](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L321)
+[qualtrics.ts:322](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L322)
 
 ___
 
@@ -487,7 +487,7 @@ Gets information about a specified group
 
 #### Defined in
 
-[qualtrics.ts:141](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L141)
+[qualtrics.ts:142](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L142)
 
 ___
 
@@ -505,7 +505,7 @@ Gets list of all groups known to the user account
 
 #### Defined in
 
-[qualtrics.ts:131](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L131)
+[qualtrics.ts:132](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L132)
 
 ___
 
@@ -531,7 +531,7 @@ Get contact from mailinglists
 
 #### Defined in
 
-[qualtrics.ts:277](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L277)
+[qualtrics.ts:278](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L278)
 
 ___
 
@@ -556,7 +556,7 @@ Get all mailinglists contacts
 
 #### Defined in
 
-[qualtrics.ts:265](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L265)
+[qualtrics.ts:266](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L266)
 
 ___
 
@@ -579,7 +579,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:352](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L352)
+[qualtrics.ts:353](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L353)
 
 ___
 
@@ -609,7 +609,7 @@ https://api.qualtrics.com/reference#get-user
 
 #### Defined in
 
-[qualtrics.ts:101](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L101)
+[qualtrics.ts:102](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L102)
 
 ___
 
@@ -644,7 +644,7 @@ https://api.qualtrics.com/reference#list-users
 
 #### Defined in
 
-[qualtrics.ts:90](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L90)
+[qualtrics.ts:91](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L91)
 
 ___
 
@@ -664,7 +664,7 @@ ___
 
 #### Defined in
 
-[qualtrics.ts:116](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L116)
+[qualtrics.ts:117](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L117)
 
 ___
 
@@ -687,7 +687,7 @@ MailingList
 
 #### Defined in
 
-[qualtrics.ts:254](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L254)
+[qualtrics.ts:255](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L255)
 
 ___
 
@@ -712,7 +712,7 @@ Delete Directory Contact
 
 #### Defined in
 
-[qualtrics.ts:233](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L233)
+[qualtrics.ts:234](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L234)
 
 ___
 
@@ -737,7 +737,7 @@ Remove User from Group
 
 #### Defined in
 
-[qualtrics.ts:175](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L175)
+[qualtrics.ts:176](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L176)
 
 ___
 
@@ -759,7 +759,7 @@ Returns a new survey distribution object
 
 #### Defined in
 
-[qualtrics.ts:311](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L311)
+[qualtrics.ts:312](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L312)
 
 ___
 
@@ -784,7 +784,7 @@ Unsubscribed Contact im Directory aus
 
 #### Defined in
 
-[qualtrics.ts:244](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L244)
+[qualtrics.ts:245](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L245)
 
 ___
 
@@ -810,7 +810,7 @@ Update Directory Contact
 
 #### Defined in
 
-[qualtrics.ts:222](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L222)
+[qualtrics.ts:223](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L223)
 
 ___
 
@@ -837,7 +837,7 @@ Update Daten eines List Contact
 
 #### Defined in
 
-[qualtrics.ts:302](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L302)
+[qualtrics.ts:303](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L303)
 
 ___
 
@@ -864,7 +864,7 @@ Use: user('id').update({data})
 
 #### Defined in
 
-[qualtrics.ts:112](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L112)
+[qualtrics.ts:113](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L113)
 
 ___
 
@@ -889,7 +889,7 @@ const user = qualtrics.user('UR_1A2B3C4d5E6F7G8)
 
 #### Defined in
 
-[qualtrics.ts:54](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L54)
+[qualtrics.ts:55](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L55)
 
 ___
 
@@ -909,4 +909,4 @@ https://api.qualtrics.com/reference#who-am-i
 
 #### Defined in
 
-[qualtrics.ts:43](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/qualtrics.ts#L43)
+[qualtrics.ts:44](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/qualtrics.ts#L44)

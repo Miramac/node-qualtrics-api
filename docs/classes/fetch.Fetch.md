@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[fetch.ts:11](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L11)
+[fetch.ts:11](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L11)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[fetch.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L10)
+[fetch.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L10)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[fetch.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L9)
+[fetch.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L9)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[fetch.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L8)
+[fetch.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L8)
 
 ## Methods
 
@@ -91,7 +91,7 @@ DELETE Request
 
 #### Defined in
 
-[fetch.ts:83](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L83)
+[fetch.ts:83](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L83)
 
 ___
 
@@ -117,7 +117,7 @@ URL
 
 #### Defined in
 
-[fetch.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L24)
+[fetch.ts:24](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L24)
 
 ___
 
@@ -139,7 +139,7 @@ GET Reponse Object
 
 #### Defined in
 
-[fetch.ts:46](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L46)
+[fetch.ts:46](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L46)
 
 ___
 
@@ -162,7 +162,7 @@ POST Request
 
 #### Defined in
 
-[fetch.ts:60](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L60)
+[fetch.ts:60](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L60)
 
 ___
 
@@ -183,4 +183,4 @@ ___
 
 #### Defined in
 
-[fetch.ts:103](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/fetch.ts#L103)
+[fetch.ts:103](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/fetch.ts#L103)

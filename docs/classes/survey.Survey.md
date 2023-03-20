@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[survey.ts:13](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L13)
+[survey.ts:13](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L13)
 
 ## Properties
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[survey.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L8)
+[survey.ts:8](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L8)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[survey.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L10)
+[survey.ts:10](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L10)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[survey.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L9)
+[survey.ts:9](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L9)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[survey.ts:11](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L11)
+[survey.ts:11](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L11)
 
 ## Methods
 
@@ -113,7 +113,7 @@ Create a new link distribution
 
 #### Defined in
 
-[survey.ts:44](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L44)
+[survey.ts:44](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L44)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[survey.ts:107](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L107)
+[survey.ts:107](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L107)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[survey.ts:52](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L52)
+[survey.ts:52](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L52)
 
 ___
 
@@ -177,7 +177,7 @@ Delete survey response
 
 #### Defined in
 
-[survey.ts:154](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L154)
+[survey.ts:154](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L154)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[survey.ts:79](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L79)
+[survey.ts:79](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L79)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[survey.ts:34](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L34)
+[survey.ts:34](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L34)
 
 ___
 
@@ -240,7 +240,7 @@ Create a Exportfile with the survey response data
 
 #### Defined in
 
-[survey.ts:90](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L90)
+[survey.ts:90](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L90)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-[survey.ts:131](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L131)
+[survey.ts:131](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L131)
 
 ___
 
@@ -285,7 +285,7 @@ get all contacts with survey link for one Distribution
 
 #### Defined in
 
-[survey.ts:62](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L62)
+[survey.ts:62](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L62)
 
 ___
 
@@ -307,7 +307,7 @@ get session data
 
 #### Defined in
 
-[survey.ts:71](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L71)
+[survey.ts:71](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L71)
 
 ___
 
@@ -329,7 +329,7 @@ List all survey distributions
 
 #### Defined in
 
-[survey.ts:25](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L25)
+[survey.ts:25](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L25)
 
 ___
 
@@ -349,4 +349,4 @@ ___
 
 #### Defined in
 
-[survey.ts:118](https://github.com/Miramac/node-qualtrics-api/blob/ab5e8d0/lib/survey.ts#L118)
+[survey.ts:118](https://github.com/Miramac/node-qualtrics-api/blob/22d0f86/lib/survey.ts#L118)
