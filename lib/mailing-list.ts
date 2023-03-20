@@ -16,12 +16,34 @@ export class MailingList {
   }
 
   /**
-     * Get all mailinglists contacts
-     * @param {String} listId
+     * Get 50 mailinglists contacts
+     * @param {String} skipToken (optional)
      * @returns {Promise}
      */
-  getContacts() {
-    return this.fetch.get(`/directories/${this.directory}/mailinglists/${this.id}/contacts`)
+  getContacts(skipToken?: string | null) {
+    return this.fetch.get(`/directories/${this.directory}/mailinglists/${this.id}/contacts${skipToken ? `?skipToken=${skipToken}` : ''}`)
+  }
+
+  /**
+   * Get all mailinglists contacts
+   * @param skipToken
+   * @returns {Promise}
+   **/
+  async getAllContacts(limit: number = 100) {
+    let contacts: any[] = []
+    let skipToken = null
+    do {
+      try {
+        const res:any = await this.getContacts(skipToken)
+        contacts = contacts.concat(res.result.elements)
+        skipToken = res.result.nextPage
+        skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : null
+        console
+      } catch(e) {
+        return Promise.reject(e)
+      }
+    } while (skipToken && contacts.length < limit)
+    return contacts
   }
 
   /**
