@@ -15,7 +15,8 @@ const delay = require('util').promisify(setTimeout)
  * Creates a new Qualtrics instance.
  * @class Qualtrics
  */
-class Qualtrics {
+
+export default class Qualtrics {
   config: QualtricsOptions
   fetch: Fetch
   /**
@@ -383,5 +384,3 @@ class Qualtrics {
     return this.survey(surveyId).deleteResponse(responseId)
   }
 }
-
-export = Qualtrics

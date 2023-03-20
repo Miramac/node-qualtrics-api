@@ -1,1 +1,1 @@
-module.exports = require('./dist/qualtrics')
+module.exports = require('./dist/qualtrics').default
