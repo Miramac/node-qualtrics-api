@@ -24,7 +24,6 @@ export class Group {
 
   /**
      * Gets all groups
-     * @param {String} groupId
      * @returns {Promise}
      */
     async getAll() {
