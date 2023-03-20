@@ -1,6 +1,6 @@
 const https = require('https')
 const t = require('tap')
-const Qualtrics = require('..')
+const { Qualtrics } = require('..')
 
 // Load Config
 require('dotenv').config()
@@ -21,8 +21,7 @@ const qualtrics = new Qualtrics(config)
 
 t.test('Get all groups', async t => {
   const result = await qualtrics.allGroups()
-  t.equal(Array.isArray(result.result.elements), true, 'it should be an array')
-  t.equal(result.meta.httpStatus, '200 - OK', 'it should return http status 200')
+  t.equal(Array.isArray(result), true, 'it should be an array')
   t.end()
 })
 t.test('Get a group', async t => {
