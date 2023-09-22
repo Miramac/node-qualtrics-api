@@ -31,6 +31,26 @@ export class User {
   get() {
     return this.fetch.get(`users/${this.id}`)
   }
+
+  /**
+   * Get all Users
+   * @returns {Promise}
+   */
+  async getAll() {
+    let users: any[] = []
+    let offset = null
+    do {
+      try {
+        const res:any = await this.fetch.get(`users?offset=${offset || 0}`)
+        users = users.concat(res.result.elements)
+        offset = res.result.nextPage
+        offset = (offset) ? res.result.nextPage.split('offset=')[1] : offset
+      } catch(e) {
+        return Promise.reject(e)
+      }
+    } while (offset)
+    return users
+  }
   
   /**
    * Updates user information

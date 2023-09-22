@@ -24,11 +24,22 @@ export class Group {
 
   /**
      * Gets all groups
-     * @param {String} groupId
      * @returns {Promise}
      */
-    getAll() {
-      return this.fetch.get('groups')
+    async getAll() {
+      let groups: any[] = []
+      let offset = null
+      do {
+        try {
+          const res:any = await this.fetch.get(`groups?offset=${offset || 0}`)
+          groups = groups.concat(res.result.elements)
+          offset = res.result.nextPage
+          offset = (offset) ? res.result.nextPage.split('offset=')[1] : offset
+        } catch(e) {
+          return Promise.reject(e)
+        }
+      } while (offset)
+      return groups
     }
   
     /**
