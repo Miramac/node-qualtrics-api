@@ -15,75 +15,70 @@ export class IQDirectory {
 
 
   /**
-     * Get Directory Contacts. PageSize 100
-     * @param {String} nextPage
-     * @returns {Promise}
-     */
-    getContacts(nextPage?: string | null): Promise<any> {
-      if (nextPage) {
-        return this.fetch.get(nextPage)
-      }
-      return this.fetch.get(`/directories/${this.directory}/contacts/?pageSize=100`)
+   * Get Directory Contacts
+   * @param {String} skipToken (optional) default null
+   * @param {Number} pageSize (optional) default 100
+   * @returns {Promise}
+   */
+    getContacts(skipToken?: string | null, pageSize: number = 100) {
+      pageSize = pageSize > 100 ? 100 : pageSize
+      pageSize = pageSize < 1 ? 1 : pageSize
+      return this.fetch.get(`/directories/${this.directory}/contacts?pageSize=${pageSize}${skipToken ? `&skipToken=${skipToken}` : ''}`)
     }
   
     /**
-       * Get all Directory Contacts
-       * @returns {Promise}
-       */
-    async getAllContacts () {
+     * Get all Directory Contacts
+     * @param {Number} limit (optional) default 100
+     * @param {String} skipToken (optional) default null
+     * @returns {Promise}
+     */
+    async getAllContacts(limit: number = 100, skipToken?: string | null) {
       let contacts: any[] = []
-      let nextPage = null
-      try {
-        do {
-          try {
-            const res:any = await this.getContacts(nextPage)
-            contacts = contacts.concat(res.result.elements)
-            nextPage = res.result.nextPage
-          } catch(e) {
-            return Promise.reject(e)
-          }
-        } while (nextPage)
-        return contacts
-      } catch (e) {
-        return Promise.reject(e)
-      }
+      do {
+        try {
+          const res:any = await this.getContacts(skipToken, limit)
+          contacts = contacts.concat(res.result.elements)
+          skipToken = res.result.nextPage
+          skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : null
+        } catch(e) {
+          return Promise.reject(e)
+        }
+      } while (skipToken && contacts.length < limit)
+      return { contacts, skipToken }
     }
-  
-    /**
-     * Retrieve the contacts in a directory who have opted out.
-     * @param nextPage 
-     * @returns {Promise}
-     */
-    getOptedOutContacts (nextPage?: string | null): Promise<any> {
-      if (nextPage) {
-      return this.fetch.get(nextPage)
-      }
-      return this.fetch.get(`/directories/${this.directory}/contacts/optedOutContacts/?pageSize=100`)
-       
+
+  /**
+   * Retrieve the contacts in a directory who have opted out.
+   * @param {String} skipToken (optional) default null
+   * @param {Number} pageSize (optional) default 100
+   * @returns {Promise}
+   */
+    getOptedOutContacts(skipToken?: string | null, pageSize: number = 100) {
+      pageSize = pageSize > 100 ? 100 : pageSize
+      pageSize = pageSize < 1 ? 1 : pageSize
+      return this.fetch.get(`/directories/${this.directory}/contacts/optedOutContacts?pageSize=${pageSize}${skipToken ? `&skipToken=${skipToken}` : ''}`)
     }
 
     /**
      * Retrieve all the contacts in a directory who have opted out.
+     * @param {Number} limit (optional) default 100
+     * @param {String} skipToken (optional) default null
      * @returns {Promise}
      */
-     async getAllOptedOutContacts () {
-        let contacts: any[] = []
-        let nextPage = null
+    async getAllOptedOutContacts(limit: number = 100, skipToken?: string | null) {
+      let contacts: any[] = []
+      do {
         try {
-          do {
-            try {
-              const res:any = await this.getOptedOutContacts(nextPage)
-              contacts = contacts.concat(res.result.elements)
-              nextPage = res.result.nextPage
-            } catch(e) {
-              return Promise.reject(e)
-            }
-          } while (nextPage)
-          return contacts
-        } catch (e) {
+          const res:any = await this.getOptedOutContacts(skipToken, limit)
+          contacts = contacts.concat(res.result.elements)
+          skipToken = res.result.nextPage
+          skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : null
+        } catch(e) {
           return Promise.reject(e)
         }
-      }
+      } while (skipToken && contacts.length < limit)
+      return { contacts, skipToken }
+    }
 
     /**
        * Get data for one Directory Contact
