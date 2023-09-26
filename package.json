@@ -1,8 +1,8 @@
 {
   "name": "qualtrics-api",
-  "version": "3.0.0",
+  "version": "3.0.0-rc1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "types": "./dist/qualtrics.d.ts",
   "scripts": {
     "prepare": "npm run build && npm run typedoc-md",
