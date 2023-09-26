@@ -28,42 +28,6 @@ export class Survey {
   }
 
   /**
-   * 
-   * @param distributionId 
-   */
-  distribution(distributionId?: string) {
-    return new Distribution(this.config, this.id, distributionId)
-  }
-  /**
-   * @deprecated
-   * Create a new link distribution
-   *@param {String} mailingListId
-   * @param {Object} data
-   * @returns {Promise}
-   */
-  addDistribution(mailingListId: string, data?: any) {
-    return this.distribution().add(mailingListId)
-  }
-
-  /**
-   * @deprecated
-   * @param distributionId
-   */
-  async deleteDistribution(distributionId: string) {
-    return this.distribution(distributionId).delete()
-  }
-
-  /** 
-  * @deprecated
-  * get all contacts with survey link for one Distribution
-  * @param {String} distributionId Distribution-ID (eg. EMD_abdfgfdgh4e64)
-  * @returns {Promise}
-  */
-  async getLinks(distributionId: string) {
-    return this.distribution(distributionId).contacts()
-  }
-
-  /**
    *  get session data
    * @param {String} sessionId
    * @returns {Promise}
