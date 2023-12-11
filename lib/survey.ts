@@ -18,13 +18,40 @@ export class Survey {
   }
 
   /**
-     * List all survey distributions
-     * @param {String} distributionRequestType ('GeneratedInvite' for Individual Link Distributions)
-     * @returns {Promise}
-     */
-    listDistribution(distributionRequestType?: string) {
+   * List all survey distributions
+   * @param {String} distributionRequestType ('GeneratedInvite' for Individual Link Distributions)
+   * @returns {Promise}
+   * @deprecated use getDistributions()
+   */
+  listDistribution(distributionRequestType?: string) {
+    return this.getDistributions(distributionRequestType)
+  }
+  /**
+   * List all survey distributions
+   * @param {String} distributionRequestType ('GeneratedInvite' for Individual Link Distributions)
+   * @returns {Promise}
+   */
+  getDistributions(distributionRequestType?: string, skipToken?: string | null) {
     distributionRequestType = (distributionRequestType) ? `&distributionRequestType=${distributionRequestType}` : ''
-    return this.fetch.get(`/distributions?surveyId=${this.id}${distributionRequestType}`)
+    skipToken = (skipToken) ? `&skipToken=${skipToken}` : ''
+    return this.fetch.get(`/distributions?surveyId=${this.id}${distributionRequestType}${skipToken}`)
+  }
+
+  async getAllDistributions(distributionRequestType?: string) {
+    let distributions: any[] = []
+    let skipToken = null
+    do {
+      try {
+        const res:any = await this.getDistributions(distributionRequestType, skipToken)
+        distributions = distributions.concat(res.result.elements)
+        skipToken = res.result.nextPage
+        skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : null
+        console
+      } catch(e) {
+        return Promise.reject(e)
+      }
+    } while (skipToken && distributions.length)
+    return distributions
   }
 
   /**
@@ -122,8 +149,10 @@ export class Survey {
     } else {
       if (res.result.status && res.result.status === 'complete') {
         return res.result.fileId
-      } else {
+      } else if (res.result.status && res.result.status === 'inProgress') {
         return null
+      } else {
+        throw new Error(res.result)
       }
     }
   }
