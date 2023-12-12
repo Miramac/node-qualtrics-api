@@ -26,7 +26,7 @@ export class Qualtrics {
   * import { Qualtrics } from 'qualtrics-api'
   *  const config = {
   *    apiToken: '<API_TOKEN>',
-  *    baseUrl: 'https://eu.qualtrics.com/API/v3/',
+  *    apiUrl: 'https://eu.qualtrics.com/API/v3/',
   *    defaultDirectory: 'POOL_xxxxxxxx'
   *  }
   *  const qualtrics = new Qualtrics(config)

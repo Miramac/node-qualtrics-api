@@ -54,6 +54,14 @@ export class Distribution {
    *
    * @param distributionId
    */
+  async get() {
+    return this.fetch.get(`/distributions/${this.id}?surveyId=${this.surveyId}`)
+  }
+
+  /**
+   *
+   * @param distributionId
+   */
   async delete() {
     return this.fetch.delete(`/distributions/${this.id}`)
   }
@@ -79,7 +87,7 @@ export class Distribution {
         }
       } while (skipToken)
       return { 
-        result: { contacts } 
+        contacts
       }
     } catch (e) {
       return Promise.reject(e)

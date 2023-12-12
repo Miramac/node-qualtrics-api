@@ -14,7 +14,7 @@ const Qualtrics = require('qualtrics-api')
 
 const config = {
   apiToken: '<API_TOKEN>',
-  baseUrl: 'https://eu.qualtrics.com/API/v3/',
+  apiUrl: 'https://eu.qualtrics.com/API/v3/',
   DefaultDirectory: 'POOL_xxxxxxxx'
 }
 

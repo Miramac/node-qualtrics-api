@@ -1,19 +1,19 @@
 import * as https from 'https'
 import { Response } from 'node-fetch'
 import { FetchOptions } from './interfaces/options'
-const nodeFetch = require('node-fetch')
+import nodeFetch from 'node-fetch'
 
 
 export class Fetch {
-  headers: object
-  baseUrl: string
+  headers: RequestInit['headers']
+  apiUrl?: string
   agent: any
   constructor(config: FetchOptions) {
-    this.headers = {
-      'Content-Type': 'application/json',
-      'x-api-token': config.apiToken
-    }
-    this.baseUrl = config.baseUrl
+    this.headers = new Headers([
+      ['Content-Type', 'application/json'],
+      ['x-api-token',  config.apiToken || '']
+    ])
+    this.apiUrl = config.apiUrl
     this.agent = config.agent || new https.Agent()
   }
 
@@ -22,7 +22,7 @@ export class Fetch {
    *  @path {string} URL
    */
   get(path: string):Promise<any> {
-    path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
+    path = (path.indexOf('https://') !== -1) ? path : this.apiUrl + path
     return nodeFetch(path, {
       method: 'get',
       headers: this.headers,
@@ -44,7 +44,7 @@ export class Fetch {
    * @param path 
    */
   getRaw(path: string): Promise<Response> {
-    path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
+    path = (path.indexOf('https://') !== -1) ? path : this.apiUrl + path
     return nodeFetch(path, {
       method: 'get',
       headers: this.headers,
@@ -58,7 +58,7 @@ export class Fetch {
    * @param data 
    */
   post(path: string, data: object) {
-    path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
+    path = (path.indexOf('https://') !== -1) ? path : this.apiUrl + path
     return nodeFetch(path, {
       method: 'post',
       headers: this.headers,
@@ -81,7 +81,7 @@ export class Fetch {
    * @param path 
    */
   delete(path: string, data?: object) {
-    path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
+    path = (path.indexOf('https://') !== -1) ? path : this.apiUrl + path
     return nodeFetch(path, {
       method: 'delete',
       headers: this.headers,
@@ -101,7 +101,7 @@ export class Fetch {
 
   // PUT Request
   put(path: string, data: object) {
-    path = (path.indexOf('https://') !== -1) ? path : this.baseUrl + path
+    path = (path.indexOf('https://') !== -1) ? path : this.apiUrl + path
     return nodeFetch(path, {
       method: 'put',
       headers: this.headers,
