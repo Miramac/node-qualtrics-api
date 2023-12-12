@@ -16,34 +16,36 @@ export class MailingList {
   }
 
   /**
-     * Get 50 mailinglists contacts
-     * @param {String} skipToken (optional)
-     * @returns {Promise}
-     */
-  getContacts(skipToken?: string | null) {
-    return this.fetch.get(`/directories/${this.directory}/mailinglists/${this.id}/contacts${skipToken ? `?skipToken=${skipToken}` : ''}`)
+   * Get 50 mailinglists contacts
+   * @param {String} skipToken (optional)
+   * @returns {Promise}
+   */
+  getContacts(skipToken?: string | null, pageSize: number = 100) {
+    pageSize = pageSize > 100 ? 100 : pageSize
+    pageSize = pageSize < 1 ? 1 : pageSize
+    return this.fetch.get(`/directories/${this.directory}/mailinglists/${this.id}/contacts?pageSize=${pageSize}${skipToken ? `&skipToken=${skipToken}` : ''}`)
   }
 
   /**
    * Get all mailinglists contacts
    * @param skipToken
+   * @param limit {number} default 100
+   * @param skipToken {string} default null
    * @returns {Promise}
    **/
-  async getAllContacts(limit: number = 100) {
+  async getAllContacts(limit: number = 100, skipToken?: string | null) {
     let contacts: any[] = []
-    let skipToken = null
     do {
       try {
-        const res:any = await this.getContacts(skipToken)
+        const res:any = await this.getContacts(skipToken , limit)
         contacts = contacts.concat(res.result.elements)
         skipToken = res.result.nextPage
         skipToken = (skipToken) ? res.result.nextPage.split('skipToken=')[1] : null
-        console
       } catch(e) {
         return Promise.reject(e)
       }
     } while (skipToken && contacts.length < limit)
-    return contacts
+    return { contacts, skipToken }
   }
 
   /**
