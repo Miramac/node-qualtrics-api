@@ -9,10 +9,10 @@ export class Fetch {
   apiUrl?: string
   agent: any
   constructor(config: FetchOptions) {
-    this.headers = new Headers([
+    this.headers = [
       ['Content-Type', 'application/json'],
       ['x-api-token',  config.apiToken || '']
-    ])
+    ]
     this.apiUrl = config.apiUrl
     this.agent = config.agent || new https.Agent()
   }
