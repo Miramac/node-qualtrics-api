@@ -23,7 +23,7 @@ export class Qualtrics {
   * @param Options Qualtrics Login data
   * @example
   * ```
-  * import { Qualtrics } from 'qualtrics-api'
+  *  import Qualtrics from '../lib/qualtrics'
   *  const config = {
   *    apiToken: '<API_TOKEN>',
   *    apiUrl: 'https://eu.qualtrics.com/API/v3/',
@@ -71,7 +71,7 @@ export class Qualtrics {
    * ```
    */
   allUsers () {
-    return this.fetch.get('users')
+    return new User(this.config).getAll()
   }
 
   /**
