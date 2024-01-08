@@ -2,7 +2,8 @@
   "name": "qualtrics-api",
   "version": "3.0.0-beta.1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "type": "module",
   "types": "./dist/qualtrics.d.ts",
   "scripts": {
     "prepare": "npm run build && npm run typedoc-md",
@@ -32,6 +33,7 @@
     "@types/node-fetch": "^2.6.9",
     "dotenv": "^16.3.1",
     "node-fetch": "^3.3.2",
+    "ts-node": "^10.9.2",
     "typedoc": "^0.25.4",
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.3.3",
