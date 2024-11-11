@@ -6,10 +6,7 @@ require('dotenv').config()
 const config = {
   apiToken: process.env.API_TOKEN,
   baseUrl: process.env.BASE_URL,
-  defaultDirectory: process.env.DEFAULT_DIRECTORY,
-  agent: new https.Agent({
-    rejectUnauthorized: false // self signed certificate
-  })
+  defaultDirectory: process.env.DEFAULT_DIRECTORY
 }
 const qualtrincsIds = {
    testGroupId: process.env.TEST_GROUP_ID,
