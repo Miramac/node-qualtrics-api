@@ -1,16 +1,17 @@
-[qualtrics-api](README.md) / Exports
+[**qualtrics-api**](README.md)
+
+***
 
 # qualtrics-api
 
-## Table of contents
+## Modules
 
-### Modules
-
-- [distribution](modules/distribution.md)
-- [fetch](modules/fetch.md)
-- [group](modules/group.md)
-- [iq-directory](modules/iq_directory.md)
-- [mailing-list](modules/mailing_list.md)
-- [qualtrics](modules/qualtrics.md)
-- [survey](modules/survey.md)
-- [user](modules/user.md)
+- [distribution](distribution/README.md)
+- [fetch](fetch/README.md)
+- [group](group/README.md)
+- [interfaces/options](interfaces/options/README.md)
+- [iq-directory](iq-directory/README.md)
+- [mailing-list](mailing-list/README.md)
+- [qualtrics](qualtrics/README.md)
+- [survey](survey/README.md)
+- [user](user/README.md)

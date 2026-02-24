@@ -1,4 +1,6 @@
-qualtrics-api / [Exports](modules.md)
+**qualtrics-api**
+
+***
 
 # node-qualtrics-api
 A NodeJS package for Qualtrics REST API https://api.qualtrics.com/api-reference/
