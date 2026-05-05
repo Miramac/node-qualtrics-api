@@ -26,4 +26,4 @@ qualtrics.whoami()
   .catch(console.error)
 
 ````
-[Full Documentation](https://github.com/Miramac/node-qualtrics-api/blob/master/docs/classes/_qualtrics_.qualtrics.md)
+[Documentation](https://github.com/Miramac/node-qualtrics-api/blob/main/docs/classes/qualtrics.default.md)
